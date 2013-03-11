@@ -1,5 +1,0 @@
-@!(comment)
-
-<li>
-  <a class="user">@comment.user</a>: @comment.text
-</li>

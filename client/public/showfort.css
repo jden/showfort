@@ -106,7 +106,7 @@ border-radius: 3px;
   margin-left: 30px;
 }
 .showctl{
-  text-align: right;
+  text-align: center;
   margin: 5px 0;
 }
 .showctl [class*="button"]{

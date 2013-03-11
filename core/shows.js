@@ -129,3 +129,22 @@ function unfaveShow(username, showId) {
     .where({name: username})
     .update({$pull: {faves: minq.ObjectId(showID)}})
 }
+
+exports.getCommentsById = function (showId) {
+  showId = '8ba4a2177aef90c068bcd108'
+  return minq
+    .from('shows')
+    .byId(showId)
+    .select({comments: 1})
+    .one().then(function (show) {
+      return show.comments
+    })
+}
+
+exports.addComment = function (username, showId, text) {
+  var comment = {user: username, text: text, mentioned:[], hashtags:[]}
+  return minq
+    .from('shows')
+    .byId(showId)
+    .update({$push: {'comments': comment}})
+}

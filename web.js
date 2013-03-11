@@ -28,6 +28,9 @@ wham('client assets', '/public')
 wham('shows list', '/shows')
   .get(shows.list, 'req.query.skip', 'req.query.limit', 'req.user')
 
+wham('show comments', '/shows/8ba4a2177aef90c068bcd108/comments')
+  .get(shows.getCommentsById, 'req.params.id')
+
 wham('upcoming shows', '/shows/upcoming')
   .get(shows.listFuture, 'req.query.skip', 'req.query.limit', 'req.user')
 

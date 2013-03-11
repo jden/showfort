@@ -5,12 +5,12 @@ var IndexedArray = require('indexed-array')
 
 var loaded = false
 var shows
-
+var _shows = []
 function reload () {
   $.ajax('/shows').then(function (s) {
-    var indexed = IndexedArray(s)
-    window.shows = indexed
-    shows = Q.resolve(indexed)
+    _shows = IndexedArray(s)
+    window.shows = _shows
+    shows = Q.resolve(_shows)
     loaded = true
     events.emit('loaded', shows)
   })
@@ -21,9 +21,10 @@ reload()
 module.exports = {
   byId: byId,
   all: all,
-  reload: reload
+  reload: reload,
+  commentsById: commentsById,
+  sync: sync
 }
-
 
 function all() {
   if (loaded) return shows
@@ -39,4 +40,12 @@ function byId(id) {
     console.log(shows, id, shows[id])
     return shows[id]
   })
+}
+
+function commentsById(id) {
+  return Q($.ajax('/shows/'+id+'/comments'))
+}
+
+function sync(){
+  return _shows
 }

@@ -19,7 +19,7 @@ var Show = function(raw) {
     upvotes: [],
     downvotes: [],
     score: 0,
-    thoughts: [],
+    comments: [],
     tags: []
   }
 }

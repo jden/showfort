@@ -1,9 +1,13 @@
 tasks:
 
 
-- browserify build
-- implement search filtering, and open/close search bar (autofocus input)
-- populate venue location data like a local
+x browserify build
+x implement search filtering, and open/close search bar (autofocus input)
+-- hide unneeded date/time bars
+x populate venue location data like a local
+
+- lazy load comments
+-- wham url param parsing (steal from express)
 
 - venue view
 
@@ -15,6 +19,6 @@ tasks:
 - fave functionality
 - comment functionality
 
-
+- show day in title as you scroll down
 
 - performance tuning - pre-load band, venue data, only load the comments and scores and faves and stuff

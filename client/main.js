@@ -2,6 +2,7 @@ var tGroup = require('./templates/group.bliss')
 var tShow = require('./templates/show.bliss')
 var _ = require('lodash')
 var show = require('./show')
+var search = require('./search')
 
 var shows = require('./data/shows')
 shows.all().then(function (shows) {
