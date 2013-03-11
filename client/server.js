@@ -5,7 +5,7 @@ var blissify = require('./blissify')
 var watch = require('watch')
 var UglifyJS = require('uglify-js')
 
-var debug = true
+var debug = process.env.NODE_ENV !== 'production'
 var bundle = ''
 
 
@@ -16,8 +16,6 @@ module.exports = function (req, res) {
   req.url = path || '/index.html'
 
 
-  console.log('url', req.url)
-
   if (req.url === '/bundle.js') {
     res.setHeader('Content-Type', 'text/javascript')
     res.send(bundle)
@@ -27,7 +25,6 @@ module.exports = function (req, res) {
   files(req, res)
 
 }
-console.log(__dirname + '/main.js')
 
 var bundler = browserify(__dirname + '/main.js')
 
@@ -43,7 +40,6 @@ function build() {
     bundle = debug ? src : uglify(src)
     building = false
     console.log('browserify: bundle updated - ' + new Date)
-    console.log(bundle)
   })
 }
 build()
