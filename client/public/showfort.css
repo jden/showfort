@@ -21,6 +21,13 @@ nav.search{
   display: block;
   margin-top: 6px;
 }
+
+.list li{
+  padding-right: 100px;
+}
+.list li > a:not([class*="button"]) {
+  margin-right: -100px;
+}
 .show{
   border-left-width: 10px;
   border-left-style: solid;
@@ -96,7 +103,7 @@ nav.search{
 .detail{
 border: 1px solid #ccc;
 padding: 10px;
-margin: 10px 5px 0;
+margin: 10px -50px 0 0;
 border-radius: 3px;
 }
 .venue .info {
@@ -114,7 +121,7 @@ border-radius: 3px;
   font-size: 110%;
   width: 25%;
   margin: 0 5px;
-  padding: 6px 12px;
+  padding: 6px 2px;
 }
 .showctl .fave{
   display: inline-block;
