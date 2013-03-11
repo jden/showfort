@@ -3,8 +3,12 @@
   var parse = function (text) { return text }
 }
 
+@if (comments.length) {
 @comments.map(function (comment) {
   <li>
     <a class="user">@comment.user</a>: @parse(comment.text)
   </li>
 })
+}else {
+  <li>no comments yet! <strong>add</strong> yours above.</li>
+}
