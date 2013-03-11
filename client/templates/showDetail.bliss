@@ -1,7 +1,7 @@
 @!(show, venue)
 
 <div class="showinfo">
-  <span class="venue @venue._id">At @venue.venue <span class="info">(@venue.at) &bullet; @venue.age</span></span>
+  <span class="venue @venue._id">At @venue.venue <span class="info">(@venue.at) @venue.age</span></span>
 </div>
 <div class="detail">
   <div class="showctl">

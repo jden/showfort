@@ -1,6 +1,6 @@
 {
   "name": "treefort",
-  "version": "0.0.0-9",
+  "version": "0.0.0-10",
   "description": "a sample app for bands and festivals and stuff",
   "main": "index.js",
   "scripts": {
