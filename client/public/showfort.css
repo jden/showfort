@@ -1,0 +1,147 @@
+.button .icon-reorder{
+  font-size: 18px;
+}
+.button.icon-search{
+  font-size: 18px;
+}
+
+nav.search{
+  position: absolute;
+  z-index: 100000;
+  top: 44px;
+  right: 0px;
+  background: #445;
+  width: 100%;
+  height: 50px;
+  display: none;
+}
+#search{
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 6px;
+}
+.show{
+  border-left-width: 10px;
+  border-left-style: solid;
+}
+.show a{
+  font-size: 110%;
+}
+.show .fave{
+  display: none;
+}
+.show .fave.faved{
+  display: inline-block;
+  position: absolute;
+  right:  70px;
+  top: 20px;
+  font-size: 20px;
+  color: #FFC700;
+  text-shadow: 1px 1px #E3B307;
+}
+.v1{
+  border-left-color: #90CA77; 
+}
+.v2{
+  border-left-color: #81C6DD; 
+}
+.v3{
+  border-left-color: #E9B64D; 
+}
+.v4{
+  border-left-color: #C23E06; 
+}
+.v5{
+  border-left-color: #9E3B33; 
+}
+.v6{
+  border-left-color: #CF65DB; 
+}
+.v7{
+  border-left-color: #6B7FF2; 
+}
+.v8{
+  border-left-color: #E3F073; 
+}
+.v9{
+  border-left-color: #BA7D3F; 
+}
+.v10{
+  border-left-color: #FF87CF; 
+}
+.v11{
+  border-left-color: #77E6CF; 
+}
+.v12{
+  border-left-color: #F07380; 
+}
+.v13{
+  border-left-color: #E48743; 
+}
+
+.expanded .chevron:before{
+  top: 9px;
+  right: -1px;
+  -webkit-transform: rotate(135deg)
+}
+
+.expanded .chevron:after{
+  top: 5px;
+  right: 5px;
+  -webkit-transform: rotate(-135deg);
+
+}
+
+.detail{
+border: 1px solid #ccc;
+padding: 10px;
+margin: 10px 5px 0;
+border-radius: 3px;
+}
+.venue .info {
+  color: #888;
+}
+.showinfo .hashtag{
+  margin-left: 30px;
+}
+.showctl{
+  text-align: right;
+  margin: 5px 0;
+}
+.showctl [class*="button"]{
+  position: relative;
+  font-size: 110%;
+  width: 25%;
+  margin: 0 5px;
+  padding: 6px 12px;
+}
+.showctl .fave{
+  display: inline-block;
+}
+.showctl .faved{
+background-color: #FFC700;
+background-image: -webkit-linear-gradient(top, #FFC700 0, #D7A803 100%);
+background-image: linear-gradient(to bottom, #FFC700 0, #D7A803 100%);
+border: 1px solid #E3B307;
+color: #fff;
+}
+.showctl .button-positive{
+background-color: #ED6527;
+background-image: -webkit-linear-gradient(top, #ED6527 0, #C04C17 100%);
+background-image: linear-gradient(to bottom, #ED6527 0, #C04C17 100%);
+border: 1px solid #CC521A;
+color: #fff;
+}
+
+.comments{
+  list-style: none;
+}
+.comments li{
+  border: 0;
+  padding: 3px 0 5px;
+}
+.comments .user, .comments .hashtag{
+  font-weight: bold;
+  color: #109adc;
+}

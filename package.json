@@ -1,0 +1,25 @@
+{
+  "name": "treefort",
+  "version": "0.0.0",
+  "description": "a sample app for bands and festivals and stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jden/treefort.git"
+  },
+  "author": "jden",
+  "license": "MIT",
+  "dependencies": {
+    "minq": "~0.6.2",
+    "indexed-array": "~0.1.1",
+    "passport": "~0.1.16",
+    "connect": "~2.7.3",
+    "responsible": "0.0.0-pre",
+    "qed": "~0.2.0",
+    "bliss": "~1.0.1",
+    "uglify-js": "~2.2.5"
+  }
+}

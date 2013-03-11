@@ -1,0 +1,33 @@
+show
+{
+  _id:
+  name:
+  hashtag:
+  href:
+  tags:
+  venue:
+  time:
+  upvotes:
+  downvotes:
+  score:
+  thoughts:
+}
+
+venue
+{
+  _id:
+  name:
+  address:
+  geo:
+}
+
+user
+{
+  _id:
+  name:
+  password:
+  bio:
+  faves:
+  upvoted:
+  downvoted:
+}

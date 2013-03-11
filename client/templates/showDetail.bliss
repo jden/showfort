@@ -1,0 +1,13 @@
+@!(show, venue)
+
+<div class="showinfo">
+  <span class="venue @venue._id">At @venue.venue <span class="info">(@venue.at) &bullet; @venue.age</span></span>
+  <span class="hashtag"><span class="icon-twitter"></span>@show.hashtag</span>
+</div>
+<div class="detail">
+  <div class="showctl">
+    <a class="button comment"><span class="icon-comment"></span> comment</a>
+    <a class="button fave"><span class="icon-star"></span> fave</a>
+  </div>
+  <ul class="comments"><li>loading...</li></ul>
+</div>
