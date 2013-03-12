@@ -20,7 +20,7 @@ window.shows = shows
 
     var s = _.groupBy(shows, 'hour')
     _.forEach(s, function (shows, hour) {
-      html += tGroup(hour, 'hour')
+      html += tGroup(hour, 'hour', 'h'+day+hour.replace(':',''))
       html += shows.map(tShow).join('')
     })
 

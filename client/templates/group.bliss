@@ -1,2 +1,2 @@
-@!(title, className)
-<li class="list-divider @className">@title</li>
+@!(title, className, id)
+<li id="@id" class="list-divider @className">@title</li>

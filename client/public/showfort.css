@@ -21,7 +21,9 @@ nav.search{
   display: block;
   margin-top: 6px;
 }
-
+.content.searching{
+  padding-top: 50px;
+}
 .list li{
   padding-right: 100px;
 }
@@ -218,3 +220,4 @@ color: #fff;
   background-image: -webkit-linear-gradient(top, #1eb0e9 0, #109adc 100%);
   background-image: linear-gradient(to bottom, #1eb0e9 0, #109adc 100%);
 }
+
