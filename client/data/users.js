@@ -22,7 +22,8 @@ reload()
 
 module.exports = {
   me: me,
-  meSync: meSync
+  meSync: meSync,
+  authenticated: authenticated
 }
 
 function me() {
@@ -36,4 +37,15 @@ function me() {
 
 function meSync(){
   return me
+}
+
+function authenticated(action, fn) {
+  return Q.promise(function(resolve, reject) {
+    me().then(function user() {
+      if (!user) {
+        return register(action, fn)
+      }
+      return fn.call(user)
+    })  
+  })
 }

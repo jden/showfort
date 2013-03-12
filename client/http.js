@@ -4,25 +4,25 @@ module.exports = {
   get: get,
   post: post,
   put: put,
-  delete: delete
+  'delete': del
 }
 
 function get(opts) {
-  opts.method = 'GET'
+  opts.type = 'GET'
   return Q($.ajax(opts))
 }
 
 function post(opts) {
-  opts.method = 'POST'
+  opts.type = 'POST'
   return Q($.ajax(opts))
 }
 
 function put(opts) {
-  opts.method = 'PUT'
+  opts.type = 'PUT'
   return Q($.ajax(opts))
 }
 
-function delete(opts) {
-  opts.method = 'DELETE'
+function del(opts) {
+  opts.type = 'DELETE'
   return Q($.ajax(opts))
 }

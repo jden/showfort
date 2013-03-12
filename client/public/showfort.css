@@ -1,9 +1,27 @@
-.button .icon-reorder{
+#bglogo{
+  font-size: 300px;
+  text-align: center;
+  display: block;
+  margin-top: 54px;
+  color: #ccc;
+  display: none;
+}
+
+header .button .icon-star, header .button.icon-search{
   font-size: 18px;
 }
-.button.icon-search{
-  font-size: 18px;
+
+#favetoggle.off{
+  border-left-width: 1px;
+  border-right-width: 25px;
 }
+#favetoggle.on{
+  border-right-width: 1px;
+  border-left-width: 25px;
+}
+
+#favetoggle.on .icon-star:before  { content: "\f005"; }
+#favetoggle.off .icon-star:before { content: "\f006"; }
 
 nav.search{
   position: absolute;
@@ -37,10 +55,10 @@ nav.search{
 .show a{
   font-size: 110%;
 }
-.show .fave{
+.show .listfave{
   display: none;
 }
-.show .fave.faved{
+.show.faved .listfave{
   display: inline-block;
   position: absolute;
   right:  70px;
@@ -128,12 +146,13 @@ border-radius: 3px;
 .showctl .fave{
   display: inline-block;
 }
-.showctl .faved{
+.faved .showctl .fave{
 background-color: #FFC700;
 background-image: -webkit-linear-gradient(top, #FFC700 0, #D7A803 100%);
 background-image: linear-gradient(to bottom, #FFC700 0, #D7A803 100%);
 border: 1px solid #E3B307;
 color: #fff;
+text-shadow: 1px 1px #888;
 }
 .showctl .button-positive{
 background-color: #ED6527;
@@ -213,7 +232,12 @@ color: #fff;
   text-align: right;
   margin-top: -10px;
 }
-
+#about .icon-flag{
+  text-align: center;
+  display: block;
+  font-size: 80px;
+  margin-bottom: 15px;
+}
 .list-divider.day{
   color: #fff;
   background-color: #1eb0e9;

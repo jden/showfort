@@ -3,12 +3,33 @@ var http = require('./http')
 var EE = require('events').EventEmitter
 var events = new EE()
 var IndexedArray = require('indexed-array')
-var users = require('./users')
-var shows = require('./shows')
+var users = require('./data/users')
+var shows = require('./data/shows')
 
-var loaded = false
-var user
-var _user = false
+$(function () {
+  $('#favetoggle').on('click', toggle)
+})
+
+var faveFilter = false
+function toggle(e) {
+  e.preventDefault()
+
+  if (faveFilter) {
+    off()
+  } else {
+    on()
+  }
+}
+
+function off() {
+  $('#favetoggle').removeClass('on').addClass('off')
+  faveFilter = false
+}
+
+function on() {
+  $('#favetoggle').removeClass('off').addClass('on')
+  faveFilter = true
+}
 
 
 module.exports = {
@@ -31,10 +52,10 @@ function fave(type, id) {
     })
 }
 
-function fave(type, id) {
+function unfave(type, id) {
   var thing = get(type, id)
   return users.authenticated('removing ' +thing.name + ' as a fave',
     function () {
-      return http.deleting({url: '/' + type + 's/' + id + '/fave'})
+      return http.delete({url: '/' + type + 's/' + id + '/fave'})
     })
 }

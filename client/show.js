@@ -3,6 +3,7 @@ var venues = require('./data/venues')
 var tShowDetails = require('./templates/showDetail.bliss')
 var tComments = require('./templates/comments.bliss')
 var comments = require('./data/comments')
+var faves = require('./faves')
 //require('./vclick')
 var ev = ('ontouchend' in window) ? 'touchend' : 'click' 
 
@@ -18,6 +19,7 @@ $('#shows').on(ev, '.listing', toggle)
 // })
 
 $('#shows').on(ev, '.button.comment', addComment)
+$('#shows').on(ev, '.button.fave', fave)
 
 })
 
@@ -55,7 +57,8 @@ function collapse() {
 }
 
 function addComment() {
-  var $listing = $(this).closest('.listing')
+  console.log($(this))
+  var $show = $(this).closest('.show')
   comments.postComment('shows', $listing[0].id) 
 }
 
@@ -64,4 +67,15 @@ function lazyLoadComments(show, $show) {
     var comments = tComments(comments)
     $show.find('.comments').empty().append(comments)
   })
+}
+
+function fave(){
+  var $show = $(this).closest('.show')
+  var id = $show[0].id
+  if ($show.hasClass('faved')) {
+    faves.unfave('show', id)
+  } else {
+    faves.fave('show', id)
+  }
+  $show.toggleClass('faved')
 }

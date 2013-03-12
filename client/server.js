@@ -36,7 +36,7 @@ function build() {
   building = true
   console.log('rebuilding...')
   bundler.bundle( debug ? {insertGlobals: true, detectGlobals: false} : {}, function (err, src) {
-    if (err) { return console.err('browserify error:', err) }
+    if (err) { return console.error('browserify error:', err) }
     bundle = debug ? src : uglify(src)
     building = false
     console.log('browserify: bundle updated - ' + new Date)
