@@ -3,6 +3,8 @@ var tShow = require('./templates/show.bliss')
 var _ = require('lodash')
 var show = require('./show')
 var search = require('./search')
+var about = require('./about')
+require('./scrollMgr')
 
 var shows = require('./data/shows')
 shows.all().then(function (shows) {

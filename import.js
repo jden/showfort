@@ -16,9 +16,7 @@ var Show = function(raw) {
     day: raw.date.substr(9),
     hour: raw.time.trim(),
     timestamp: +timestamp(raw),
-    upvotes: [],
-    downvotes: [],
-    score: 0,
+    faves: [],
     comments: [],
     tags: []
   }

@@ -7,9 +7,7 @@ show
   tags:
   venue:
   time:
-  upvotes:
-  downvotes:
-  score:
+  faves: [usernames]
   thoughts:
 }
 
@@ -28,6 +26,5 @@ user
   password:
   bio:
   faves:
-  upvoted:
-  downvoted:
+  friends:
 }

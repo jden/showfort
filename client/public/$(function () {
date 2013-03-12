@@ -1,0 +1,7 @@
+$(function () {
+  $('header.bar-title, #about').on('click', toggle)
+})
+
+function toggle() {
+  $('#about').toggle()
+}

@@ -31,18 +31,6 @@ wham('shows list', '/shows')
 wham('show comments', '/shows/8ba4a2177aef90c068bcd108/comments')
   .get(shows.getCommentsById, 'req.params.id')
 
-wham('upcoming shows', '/shows/upcoming')
-  .get(shows.listFuture, 'req.query.skip', 'req.query.limit', 'req.user')
-
-wham('upvote', '/shows/:id/upvote')
-  .put({auth: true},
-    shows.upvoteShow, 'req.params.id', 'req.user')
-  //.delete({auth: true},
-    //shows.unupvoteShow, 'req.params.id', 'req.user')
-
-wham('downvote', '/shows/:id/downvote')
-  .put({auth: true}, wham)
-
 module.exports = wham.bam
 
 function fakeSession(req, res, next) {

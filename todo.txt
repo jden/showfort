@@ -4,6 +4,7 @@ tasks:
 x browserify build
 x implement search filtering, and open/close search bar (autofocus input)
 -- hide unneeded date/time bars
+-refcounts
 x populate venue location data like a local
 
 - lazy load comments
@@ -22,3 +23,13 @@ x populate venue location data like a local
 - show day in title as you scroll down
 
 - performance tuning - pre-load band, venue data, only load the comments and scores and faves and stuff
+
+-read/unread status for comments/threads
+-- (since these are linear, we can store it as a last-read timestamp in an object keyed on the objectid of the thread on the user document. then to get read status, query for the last read timestamp and check if a given comment is new than that timestamp. update the last-read time when the user views the comments)
+
+
+
+on deck:
+- filter group bars
+- sticky headers
+- create account
