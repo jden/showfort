@@ -40,6 +40,8 @@ embellishments:
 -- cdn static assets
 -- localStorage cache
 
+- my forwarding frame thing so i can set proper browser zoom levels and stuff from the bare domain
+
 - favicon
 
 - venue view / fave / comment / tweet

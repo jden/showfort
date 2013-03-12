@@ -73,9 +73,14 @@ function fave(){
   var $show = $(this).closest('.show')
   var id = $show[0].id
   if ($show.hasClass('faved')) {
-    faves.unfave('show', id)
+    $show.removeClass('faved')
+    faves.unfave('show', id).then(null, function () {
+      $show.addClass('faved')
+    })
   } else {
-    faves.fave('show', id)
+    $show.addClass('faved')
+    faves.fave('show', id).then(null, function () {
+      $show.removeClass('faved')
+    })
   }
-  $show.toggleClass('faved')
 }

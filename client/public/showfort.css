@@ -209,7 +209,7 @@ color: #fff;
   padding: 10px;
 }
 #signup form{
-  max-width: 600px;
+  max-width: 300px;
   display: block;
   margin: 10px auto;
 }
@@ -218,11 +218,28 @@ color: #fff;
   padding-left: 0;
   padding-right: 0;
 }
+#continuationMsg{
+  text-align: center;
+}
+#signup label span{
+  font-size: 80%;
+  color: #999;
+}
+
 #signup h2{
   margin-bottom: 10px;
 }
 #signup p{
   margin: 10px 0;
+}
+
+#signup-cancel{
+  color: #888;
+  text-align: center;
+  display: block;
+  max-width: 300px;
+  margin: 45px auto 20px;
+  text-decoration: underline;
 }
 
 #about{
