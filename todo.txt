@@ -32,6 +32,13 @@ on deck:
 
 ====
 embellishments:
+-performance enhancements
+-- remove unused css / js
+-- simplify dom
+-- preload some data / minimize requests
+-- gzip
+-- cdn static assets
+
 - venue view / fave / comment / tweet
 
 -read/unread status for comments/threads

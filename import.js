@@ -11,7 +11,7 @@ var Show = function(raw) {
   return {
     _id: minq.ObjectId(raw.href.substr('/event/'.length, 24)), //minq.ObjectId()
     name: raw.name,
-    tr: raw.tw,
+    tw: raw.tw,
     hashtag: 'tfort'+ht++,
     venue: 'v'+raw.class.substr(3),
     day: raw.date.substr(9),

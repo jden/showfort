@@ -3,6 +3,7 @@ var IndexedArray = require('indexed-array')
 
 var listProjection = {
   name: 1,
+  tw: 1,
   venue: 1,
   day: 1,
   hour: 1,
