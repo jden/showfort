@@ -32,12 +32,15 @@ on deck:
 
 ====
 embellishments:
--performance enhancements
+- performance enhancements
 -- remove unused css / js
 -- simplify dom
 -- preload some data / minimize requests
 -- gzip
 -- cdn static assets
+-- localStorage cache
+
+- favicon
 
 - venue view / fave / comment / tweet
 
