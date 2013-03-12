@@ -1,6 +1,7 @@
 [
   {
     "name": "Finn Riggins",
+    "tw": "finnriggins",
     "venue": "El Korah Shrine",
     "time": " 6:00pm",
     "href": "/event/8ba4a2177aef90c068bcd108bc8f97e1",
@@ -17,6 +18,7 @@
   },
   {
     "name": "Mickey The Jump",
+    "tw": "MickeyTHEJump",
     "venue": "Linen Building",
     "time": " 7:00pm",
     "href": "/event/2cab7c2318227ff9f55ec28c5eff00d1",
@@ -25,6 +27,7 @@
   },
   {
     "name": "Brett Netson & Snakes",
+    "tw": "brettnetson",
     "venue": "Neurolux",
     "time": " 7:00pm",
     "href": "/event/813dfd5094b072cad0fb01ff7c2cafb5",
@@ -33,6 +36,7 @@
   },
   {
     "name": "New Transit",
+    "tw": "NewTransitMusic"
     "venue": "Pengilly's Saloon",
     "time": " 7:00pm",
     "href": "/event/b3eba24d9b19dabe96857d83b3939b37",
@@ -41,6 +45,7 @@
   },
   {
     "name": "Lakefriend",
+    "tw": "Lakefriend208",
     "venue": "Red Room",
     "time": " 7:00pm",
     "href": "/event/629b5e3e9e5f73d80bdd5d3fc8bc1c78",
@@ -57,6 +62,7 @@
   },
   {
     "name": "Wampire",
+    "tw": "WAMPIREMUSIC",
     "venue": "El Korah Shrine",
     "time": " 8:00pm",
     "href": "/event/23daadccbb49ad2b2d94f1bd32e314f7",
@@ -65,6 +71,7 @@
   },
   {
     "name": "Hollow Wood",
+    "tw": "HollowWoodMusic",
     "venue": "Linen Building",
     "time": " 8:00pm",
     "href": "/event/b649bdbfdda74222ba19a10abb6ce4e4",
@@ -81,6 +88,7 @@
   },
   {
     "name": "Kris Doty",
+    "tw": "Krisdoty",
     "venue": "Pengilly's Saloon",
     "time": " 8:00pm",
     "href": "/event/0a9004f129d36749ef04d3baf5e77110",
@@ -105,6 +113,7 @@
   },
   {
     "name": "Nehemiah St-Danger",
+    "tw": "jnehemiahgo",
     "venue": "The Crux",
     "time": " 8:00pm",
     "href": "/event/231678367792f46efb0e9ec5fd745db2",
@@ -113,6 +122,7 @@
   },
   {
     "name": "Parade of Bad Guys",
+    "tw": "ParadeOfBadGuy1",
     "venue": "Tom Grainey's",
     "time": " 8:00pm",
     "href": "/event/b795bdfec7fab5f3f5743d59f9fe296b",
@@ -121,6 +131,7 @@
   },
   {
     "name": "Terrible Buttons",
+    "tw": "terriblebuttons",
     "venue": "Linen Building",
     "time": " 9:00pm",
     "href": "/event/9d1147cf4068ad80e2117a017ef518be",
@@ -129,6 +140,7 @@
   },
   {
     "name": "Eternal Fair",
+    "tw": "eternalfair",
     "venue": "Pengilly's Saloon",
     "time": " 9:00pm",
     "href": "/event/6e7fccacde578faf909584031f2ea866",
@@ -137,6 +149,7 @@
   },
   {
     "name": "Pony Time",
+    "tw": "ponyfuckingtime",
     "venue": "Red Room",
     "time": " 9:00pm",
     "href": "/event/119dcf2141580593ce6f8486f1e7d247",
@@ -161,6 +174,7 @@
   },
   {
     "name": "Foxygen",
+    "tw": "foxygentheband",
     "venue": "El Korah Shrine",
     "time": " 9:00pm",
     "href": "/event/de54a59621f6fc92a827599b61082dd7",
@@ -201,6 +215,7 @@
   },
   {
     "name": "Kris Orlowski",
+    "tw": "korlowskiband",
     "venue": "Linen Building",
     "time": "10:00pm",
     "href": "/event/465ce969b9b13eeb470c269f1022127b",
@@ -233,6 +248,7 @@
   },
   {
     "name": "Jumping Sharks",
+    "tw": "Jumping_Sharks",
     "venue": "Tom Grainey's",
     "time": "10:00pm",
     "href": "/event/5eeac9d7f3a04c500f8621cd368a16b2",
@@ -249,6 +265,7 @@
   },
   {
     "name": "Unknown Mortal Orchestra",
+    "tw": "UMO",
     "venue": "El Korah Shrine",
     "time": "10:00pm",
     "href": "/event/cd2d63c4289a03b90d584f0f076ef748",
@@ -257,6 +274,7 @@
   },
   {
     "name": "Oso Negro",
+    "tw": "oso_neg",
     "venue": "The Reef",
     "time": "10:25pm",
     "href": "/event/ae1dddf2fe7d00b42271c803809d286e",
@@ -273,6 +291,7 @@
   },
   {
     "name": "Sapient",
+    "tw": "sapientkills",
     "venue": "The Reef",
     "time": "11:00pm",
     "href": "/event/52f8b0b64b682a0cae0defd3fac12884",
@@ -281,6 +300,7 @@
   },
   {
     "name": "The Last Bison",
+    "tw": "thelastbison",
     "venue": "Linen Building",
     "time": "11:00pm",
     "href": "/event/0c461d5351b59ac118cc8744b60c69eb",
@@ -289,6 +309,7 @@
   },
   {
     "name": "Nick Jaina",
+    "tw": "nickjaina",
     "venue": "Pengilly's Saloon",
     "time": "11:00pm",
     "href": "/event/c09409c74693529b980aa7526195ba7e",
@@ -297,6 +318,7 @@
   },
   {
     "name": "Digital Leather",
+    "tw": "digitalleather",
     "venue": "Red Room",
     "time": "11:00pm",
     "href": "/event/d8d9b67a3ff5ffe89790ecbdf6d2ea68",
@@ -321,6 +343,7 @@
   },
   {
     "name": "Death Songs",
+    "tw": "death_songs",
     "venue": "The Crux",
     "time": "11:00pm",
     "href": "/event/71668faca5db4c163e33c0428116eca9",
@@ -337,6 +360,7 @@
   },
   {
     "name": "B.Dolan",
+    "tw": "BDolanSFR",
     "venue": "The Reef",
     "time": "11:45pm",
     "href": "/event/81144ee094b52e4e8f997623916042f0",
@@ -345,6 +369,7 @@
   },
   {
     "name": "The Brothers Comatose",
+    "tw": "broscomatose",
     "venue": "Linen Building",
     "time": "12:00am",
     "href": "/event/4c97918fede14cc53c47b9a8278fa101",
@@ -385,6 +410,7 @@
   },
   {
     "name": "Psychic Rites",
+    "tw": "THEEROMPER",
     "venue": "The Crux",
     "time": "12:30am",
     "href": "/event/490e7cb57f7be2c2f2883386b020221e",
@@ -393,6 +419,7 @@
   },
   {
     "name": "Sage Francis",
+    "tw": "SageFrancis",
     "venue": "The Reef",
     "time": "12:30am",
     "href": "/event/168c84f342c0b1d6a57d3ee772466948",
@@ -401,6 +428,7 @@
   },
   {
     "name": "Deep Sea Diver",
+    "tw": "deepseadiverbnd",
     "venue": "Main Stage",
     "time": " 4:45pm",
     "href": "/event/5c62f5651aadb45cf1becb97448069b4",
@@ -409,6 +437,7 @@
   },
   {
     "name": "Pickwick",
+    "tw": "PickwickMusic",
     "venue": "Main Stage",
     "time": " 5:50pm",
     "href": "/event/f8e2951f2060b2730fa09792c2f9b817",
@@ -433,6 +462,7 @@
   },
   {
     "name": "Rollersnakes",
+    "tw": "therollersnakes",
     "venue": "The Crux",
     "time": " 6:00pm",
     "href": "/event/f511871c3bc89dccdd4d760127fbd5ff",
@@ -457,6 +487,7 @@
   },
   {
     "name": "Kithkin",
+    "tw": "Kithkinband",
     "venue": "Neurolux",
     "time": " 7:00pm",
     "href": "/event/7f18ba6999cfb146e447fd3b55ac29ce",
@@ -489,6 +520,7 @@
   },
   {
     "name": "Aaron Mark Brown",
+    "tw": "aaronmarkbrown",
     "venue": "Tom Grainey's",
     "time": " 7:00pm",
     "href": "/event/62bcc3e76d42efe7e3a6b939f67b68d4",
@@ -497,6 +529,7 @@
   },
   {
     "name": "Delicate Steve",
+    "tw": "delicatesteve",
     "venue": "Main Stage",
     "time": " 7:00pm",
     "href": "/event/6313660a21857bb6b0cdb10c82fcdcf6",
@@ -513,6 +546,7 @@
   },
   {
     "name": "Wax Idols",
+    "tw": "WaxIdols",
     "venue": "Linen Building",
     "time": " 8:00pm",
     "href": "/event/3c9c4a4d3abe7ef1763a6f95ca369e21",
@@ -561,6 +595,7 @@
   },
   {
     "name": "Sharon Jones & The Dap Kings",
+    "tw": "SharonLJones",
     "venue": "Main Stage",
     "time": " 8:30pm",
     "href": "/event/aac7eb42ce39cf916bb4c4d8c0725f31",
@@ -569,6 +604,7 @@
   },
   {
     "name": "Bonefish Sam & His Orchestra",
+    "tw": "bonefishsam",
     "venue": "Grainey's Basement",
     "time": " 8:40pm",
     "href": "/event/5f5a1938d42f6a5ac11aded0f68fa7bd",
@@ -577,6 +613,7 @@
   },
   {
     "name": "Quasi",
+    "tw": "TheeQuasi",
     "venue": "El Korah Shrine",
     "time": " 9:00pm",
     "href": "/event/b78838e02170675c14bbbcfaad720e60",
@@ -593,6 +630,7 @@
   },
   {
     "name": "Tartufi",
+    "tw": "tartufi",
     "venue": "Neurolux",
     "time": " 9:00pm",
     "href": "/event/368673cbb2177e18ece59f71ad68f50d",
@@ -617,6 +655,7 @@
   },
   {
     "name": "Nude Pop",
+    "tw": "NUDE_Pop",
     "venue": "The Crux",
     "time": " 9:00pm",
     "href": "/event/3a75b940b0edfdd076c5c2429b3a3178",
@@ -625,6 +664,7 @@
   },
   {
     "name": "Danger Beard",
+    "tw": "DangerBeardBand",
     "venue": "Tom Grainey's",
     "time": " 9:00pm",
     "href": "/event/ac93ea363a2af60f6cd2e6f613dbe6e6",
@@ -649,6 +689,7 @@
   },
   {
     "name": "CC/NN",
+    "tw": "CCNNmusic",
     "venue": "China Blue (lounge room)",
     "time": " 9:40pm",
     "href": "/event/a5f66d394c62c3dc4ee66ae2adc064da",
@@ -697,6 +738,7 @@
   },
   {
     "name": "Jupiter Holiday",
+    "tw": "jupiterholiday",
     "venue": "Tom Grainey's",
     "time": "10:00pm",
     "href": "/event/cce9f823e1866d9e70fc0873af745f16",
@@ -713,6 +755,7 @@
   },
   {
     "name": "Hillstomp",
+    "tw": "Hillstomp",
     "venue": "The Reef",
     "time": "10:00pm",
     "href": "/event/8790616a4f27b8acd9ff8d19a8ba5a5b",
@@ -721,6 +764,7 @@
   },
   {
     "name": "Built To Spill (ultimate alternative wavers)",
+    "tw": "Built_2_Spill",
     "venue": "El Korah Shrine",
     "time": "10:00pm",
     "href": "/event/b235cb811daff076153dc17e20220b7b",
@@ -737,6 +781,7 @@
   },
   {
     "name": "RUMTUM",
+    "tw": "RumtumMusic",
     "venue": "China Blue (lounge room)",
     "time": "10:40pm",
     "href": "/event/7951f3bb5383ff23e82da101daeaaa43",
@@ -745,6 +790,7 @@
   },
   {
     "name": "Japanther",
+    "tw": "Japanther",
     "venue": "Linen Building",
     "time": "11:00pm",
     "href": "/event/223e1308aac1b87375ac42abb215182f",
@@ -753,6 +799,7 @@
   },
   {
     "name": "Ugly Valley Boys",
+    "tw": "UglyValleyBoys",
     "venue": "Pengilly's Saloon",
     "time": "11:00pm",
     "href": "/event/40e77eecc5d2c37948f857911f29b0d0",
@@ -769,6 +816,7 @@
   },
   {
     "name": "Red Hands Black Feet",
+    "tw": "Rdhandsblkfeet",
     "venue": "The Crux",
     "time": "11:00pm",
     "href": "/event/642f321d43d5bdd6fa35e24da349a0d3",
@@ -785,6 +833,7 @@
   },
   {
     "name": "Typhoon",
+    "tw": "weareTYPHOON",
     "venue": "Neurolux",
     "time": "11:00pm",
     "href": "/event/909b6131445c008a97e87358e010d5b8",
@@ -817,6 +866,7 @@
   },
   {
     "name": "Slow Magic",
+    "tw": "SlowwwMagic",
     "venue": "China Blue (lounge room)",
     "time": "11:40pm",
     "href": "/event/55f8131be709d22e75679ea51017d3f1",
@@ -825,6 +875,7 @@
   },
   {
     "name": "Sun Angle",
+    "tw": "sunanglemusic",
     "venue": "The Crux",
     "time": "12:00am",
     "href": "/event/e83a4285d0433991790c1f4cf0029795",
@@ -833,6 +884,7 @@
   },
   {
     "name": "Natasha Kmeto",
+    "tw": "natashakmeto",
     "venue": "China Blue (main room)",
     "time": "12:00am",
     "href": "/event/0fd57bc7cdf6e8b1ae6aee8883563e83",
@@ -841,6 +893,7 @@
   },
   {
     "name": "The Thermals",
+    "tw": "thethermals",
     "venue": "Linen Building",
     "time": "12:00am",
     "href": "/event/4cc93c1f0096d5bd806109dcf699b631",
@@ -857,6 +910,7 @@
   },
   {
     "name": "Old Death Whisper",
+    "tw": "OldDeathWhisper",
     "venue": "Pengilly's Saloon",
     "time": "12:00am",
     "href": "/event/bb252bbedf4ef4fc7fbc516cebdac47a",
@@ -865,6 +919,7 @@
   },
   {
     "name": "Karaoke From Hell",
+    "tw": "KaraokeFromHell",
     "venue": "El Korah Shrine",
     "time": "12:00am",
     "href": "/event/01cc0495460173895bbea7d759c0e8f9",
@@ -881,6 +936,7 @@
   },
   {
     "name": "Jeff Crosby & The Refugees",
+    "tw": "Jeffcrosbymusic",
     "venue": "The Reef",
     "time": "12:30am",
     "href": "/event/e116f06660f039b3b4fac9040a09ffaf",
@@ -889,6 +945,7 @@
   },
   {
     "name": "Polyrhythmics",
+    "tw": "Polyrhythmics",
     "venue": "Tom Grainey's",
     "time": "12:30am",
     "href": "/event/27f4ff18cefb5b035fb6b6bcc8264dbd",
@@ -913,6 +970,7 @@
   },
   {
     "name": "Gold Panda",
+    "tw": "goldpanda",
     "venue": "China Blue (main room)",
     "time": " 1:00am",
     "href": "/event/01cb96e5f3bbf44fdede7df8e2c7db42",
@@ -977,6 +1035,7 @@
   },
   {
     "name": "the Hoot Hoots",
+    "tw": "TheHootHoots",
     "venue": "Red Room",
     "time": " 1:30pm",
     "href": "/event/3ada66bb4d654581d60aa56bcbe0e489",
@@ -1001,6 +1060,7 @@
   },
   {
     "name": "The 4onthefloor",
+    "tw": "4otf",
     "venue": "Main Stage",
     "time": " 2:20pm",
     "href": "/event/2fe8a5ba74560800d0cf22b211c1de1f",
@@ -1025,6 +1085,7 @@
   },
   {
     "name": "Holiday Friends",
+    "tw": "HolidayFriends",
     "venue": "Main Stage",
     "time": " 3:25pm",
     "href": "/event/1ce2c5c8c807ceddc0bba7482f6df49f",
@@ -1033,6 +1094,7 @@
   },
   {
     "name": "Ugly Hussy",
+    "tw": "UglyHussy",
     "venue": "The Crux",
     "time": " 4:00pm",
     "href": "/event/6f39cdcd75fbf6f05cd7b2ea579ea4d7",
@@ -1049,6 +1111,7 @@
   },
   {
     "name": "Radiation City",
+    "tw": "RadiationCity",
     "venue": "Main Stage",
     "time": " 4:30pm",
     "href": "/event/9c8b5edad9b72feec89c5dd05e70d42b",
@@ -1073,6 +1136,7 @@
   },
   {
     "name": "Ash Reiter",
+    "tw": "ashreiter",
     "venue": "Red Room",
     "time": " 5:00pm",
     "href": "/event/b9e1ce0650d31fc6758363c92c8f1fe0",
@@ -1089,6 +1153,7 @@
   },
   {
     "name": "El Ten Eleven",
+    "tw": "ElTenEleven",
     "venue": "Main Stage",
     "time": " 5:45pm",
     "href": "/event/2732063c0a061d54467c0a8cdec5e334",
@@ -1153,6 +1218,7 @@
   },
   {
     "name": "Sick Kids XOXO",
+    "tw": "SickKidsXOXO",
     "venue": "Linen Building",
     "time": " 7:00pm",
     "href": "/event/da1ade95bb1961c6631c577ab5635dba",
@@ -1185,6 +1251,7 @@
   },
   {
     "name": "SW/MM/NG",
+    "tw": "SWIMMINGBAND",
     "venue": "The Crux",
     "time": " 7:00pm",
     "href": "/event/d6dc4240ff88dbf459e482c6d6d75ab1",
@@ -1193,6 +1260,7 @@
   },
   {
     "name": "The Blaqk Family Band",
+    "tw": "TheBlaqks",
     "venue": "Tom Grainey's",
     "time": " 7:00pm",
     "href": "/event/e1363fa82ba7ff07562c18aa69d22607",
@@ -1201,6 +1269,7 @@
   },
   {
     "name": "YACHT",
+    "tw": "yacht",
     "venue": "Main Stage",
     "time": " 7:00pm",
     "href": "/event/77f33f5430ee13b4a1560e3d4a23cfbd",
@@ -1217,6 +1286,7 @@
   },
   {
     "name": "Dirty Moogs",
+    "tw": "TheDirtyMoogs",
     "venue": "Linen Building",
     "time": " 8:00pm",
     "href": "/event/4e26a60fcf642a88f4aafdbcd2f61f17",
@@ -1225,6 +1295,7 @@
   },
   {
     "name": "Wymond Miles",
+    "tw": "WymondMiles",
     "venue": "Neurolux",
     "time": " 8:00pm",
     "href": "/event/55c298b83d71b2196bf8b18cfde0c172",
@@ -1233,6 +1304,7 @@
   },
   {
     "name": "The Jackalope Saints",
+    "tw": "jackalopesaints",
     "venue": "Pengilly's Saloon",
     "time": " 8:00pm",
     "href": "/event/44597960550e473873401add7e3c9601",
@@ -1241,6 +1313,7 @@
   },
   {
     "name": "The We Shared Milk",
+    "tw": "thewesharedmilk",
     "venue": "Red Room",
     "time": " 8:00pm",
     "href": "/event/68f6ce7f08369dce3746e4f10f17b055",
@@ -1265,6 +1338,7 @@
   },
   {
     "name": "Jeffrey Danger",
+    "tw": "Jeffrey_Danger",
     "venue": "Grainey's Basement",
     "time": " 8:30pm",
     "href": "/event/add39efe1993a005ca659d4fcae7bccb",
@@ -1273,6 +1347,7 @@
   },
   {
     "name": "The Walkmen",
+    "tw": "TheWalkmen",
     "venue": "Main Stage",
     "time": " 8:30pm",
     "href": "/event/0658d2bba01cd7dc3552fd48ed309ac2",
@@ -1297,6 +1372,7 @@
   },
   {
     "name": "Y La Bamba",
+    "tw": "ylabamba",
     "venue": "Neurolux",
     "time": " 9:00pm",
     "href": "/event/05224aa89396c182b843c99c34590810",
@@ -1313,6 +1389,7 @@
   },
   {
     "name": "James Plane Wreck",
+    "tw": "Jamesplanewreck",
     "venue": "Red Room",
     "time": " 9:00pm",
     "href": "/event/1aa307ec55678eb93b683a89056977b1",
@@ -1320,15 +1397,8 @@
     "date": "2013-03-23"
   },
   {
-    "name": "James Plane Wreck",
-    "venue": "Red Room",
-    "time": " 9:00pm",
-    "href": "/event/41b549ae086bbfb992a4964b468e5bb6",
-    "class": "ev_9",
-    "date": "2013-03-23"
-  },
-  {
     "name": "Gayze",
+    "tw": "GayzeBand",
     "venue": "The Crux",
     "time": " 9:00pm",
     "href": "/event/e0a5e31cdd7f90c383e95a823820508b",
@@ -1337,6 +1407,7 @@
   },
   {
     "name": "Stoneseed",
+    "tw": "stoneseedband",
     "venue": "Tom Grainey's",
     "time": " 9:00pm",
     "href": "/event/f880547c7d1008270b25c6ff1443b90c",
@@ -1353,6 +1424,7 @@
   },
   {
     "name": "Lynden Williams",
+    "tw": "lynden_williams",
     "venue": "China Blue (lounge room)",
     "time": " 9:40pm",
     "href": "/event/d9b3fbe9132d1ac81e455cf8db1f8287",
@@ -1361,6 +1433,7 @@
   },
   {
     "name": "Cloud|Splitter",
+    "tw": "Cloud_Splitter",
     "venue": "Grainey's Basement",
     "time": " 9:40pm",
     "href": "/event/155350efcc6c7ba06d04d1587baa1fca",
@@ -1369,6 +1442,7 @@
   },
   {
     "name": "ManCub",
+    "tw": "mancub303",
     "venue": "Linen Building",
     "time": "10:00pm",
     "href": "/event/54d45f7dc4f6026650b7d61eac46d916",
@@ -1377,6 +1451,7 @@
   },
   {
     "name": "SISU",
+    "tw": "SISUband",
     "venue": "Neurolux",
     "time": "10:00pm",
     "href": "/event/f3470760b3b6b3d8ffb60f5524fd7404",
@@ -1385,6 +1460,7 @@
   },
   {
     "name": "A Seasonal Disguise",
+    "tw": "A_S_D",
     "venue": "Pengilly's Saloon",
     "time": "10:00pm",
     "href": "/event/6451cde3defa83cc58217478143e8074",
@@ -1409,6 +1485,7 @@
   },
   {
     "name": "Innocent Man",
+    "tw": "_InnocentMan",
     "venue": "Tom Grainey's",
     "time": "10:00pm",
     "href": "/event/adb27345381f89010f1f530ea104d2c1",
@@ -1417,6 +1494,7 @@
   },
   {
     "name": "Owlright",
+    "tw": "Owlright",
     "venue": "China Blue (main room)",
     "time": "10:00pm",
     "href": "/event/26235b2d0db608944ab975714e5e83fa",
@@ -1425,6 +1503,7 @@
   },
   {
     "name": "Built To Spill",
+    "tw": "Built_2_Spill",
     "venue": "El Korah Shrine",
     "time": "10:00pm",
     "href": "/event/548677d3f907220e47ebb03165aa6c34",
@@ -1433,6 +1512,7 @@
   },
   {
     "name": "Forrest Day",
+    "tw": "ForrestDay",
     "venue": "The Reef",
     "time": "10:00pm",
     "href": "/event/f885402b24c48519e6cdbfd49346b697",
@@ -1441,6 +1521,7 @@
   },
   {
     "name": "Deeveaux",
+    "tw": "deeveaux",
     "venue": "China Blue (lounge room)",
     "time": "10:40pm",
     "href": "/event/7285eadd3a97c7a119406587cd7cb99e",
@@ -1457,6 +1538,7 @@
   },
   {
     "name": "French Horn Rebellion",
+    "tw": "frenchhornrebel",
     "venue": "Linen Building",
     "time": "11:00pm",
     "href": "/event/a638f9bc6680a375bc5bb6c4852e8721",
@@ -1465,6 +1547,7 @@
   },
   {
     "name": "Campfire OK",
+    "tw": "campfireok",
     "venue": "Pengilly's Saloon",
     "time": "11:00pm",
     "href": "/event/2afc5e4185a42d3ac3e655012fae7130",
@@ -1497,6 +1580,7 @@
   },
   {
     "name": "Magic Sword",
+    "tw": "magicswordmusic",
     "venue": "China Blue (main room)",
     "time": "11:00pm",
     "href": "/event/637dcc701a3468bbb8e08d7dd357dc02",
@@ -1505,6 +1589,7 @@
   },
   {
     "name": "Widowspeak",
+    "tw": "widowspeaking",
     "venue": "Neurolux",
     "time": "11:00pm",
     "href": "/event/fe9147a1fe98f9398a34a4a36ed06a01",
@@ -1529,6 +1614,7 @@
   },
   {
     "name": "Ssssnake",
+    "tw": "ssssnake_inc",
     "venue": "Linen Building",
     "time": "11:50pm",
     "href": "/event/f0566313af2c664f9419665537c2ceae",
@@ -1537,6 +1623,7 @@
   },
   {
     "name": "Tea Cozies",
+    "tw": "teacozies",
     "venue": "Red Room",
     "time": "12:00am",
     "href": "/event/2317750c3389d1867729063c426501e1",
@@ -1545,6 +1632,7 @@
   },
   {
     "name": "Shigeto",
+    "tw": "__SHIGETO",
     "venue": "China Blue (main room)",
     "time": "12:00am",
     "href": "/event/b7c9210ac2c09f80d8f76877b2721450",
@@ -1553,6 +1641,7 @@
   },
   {
     "name": "Truckasauras",
+    "tw": "truckasauras",
     "venue": "The Crux",
     "time": "12:00am",
     "href": "/event/fc9635205fa3eebd6783f4a43714b6c9",
@@ -1569,6 +1658,7 @@
   },
   {
     "name": "The Heligoats",
+    "tw": "HELIGOATS",
     "venue": "Pengilly's Saloon",
     "time": "12:00am",
     "href": "/event/450a4de34a4561cc6d9c49a585dbd18b",
@@ -1577,6 +1667,7 @@
   },
   {
     "name": "WhiteWater Ramble",
+    "tw": "ramblegrass",
     "venue": "Tom Grainey's",
     "time": "12:00am",
     "href": "/event/c517ec8f490eea682066b2ff6ca3cda5",
@@ -1585,6 +1676,7 @@
   },
   {
     "name": "Karaoke From Hell",
+    "tw": "KaraokeFromHell",
     "venue": "El Korah Shrine",
     "time": "12:00am",
     "href": "/event/11a7fb3f0dd8194392e2c8aee725a350",
@@ -1601,6 +1693,7 @@
   },
   {
     "name": "Little Ruckus",
+    "tw": "LittleRuckus",
     "venue": "Linen Building",
     "time": "12:20am",
     "href": "/event/6615f5daa31b26d716f14a883ce886bb",
@@ -1609,6 +1702,7 @@
   },
   {
     "name": "K.Flay",
+    "tw": "kflay",
     "venue": "The Reef",
     "time": "12:30am",
     "href": "/event/20085bde6931352729b7b3fe60f76632",
@@ -1625,6 +1719,7 @@
   },
   {
     "name": "Shlohmo",
+    "tw": "shlohmo",
     "venue": "China Blue (main room)",
     "time": " 1:00am",
     "href": "/event/219ae71f49977a3200fac3df34655537",
@@ -1657,6 +1752,7 @@
   },
   {
     "name": "Psycache",
+    "tw": "Psycache",
     "venue": "China Blue (main room)",
     "time": " 2:00am",
     "href": "/event/d89c9c1d335a65abd06d3f05eda6e874",
@@ -1665,6 +1761,7 @@
   },
   {
     "name": "Sour Boy, Bitter Girl",
+    "tw": "srbybttrgrl",
     "venue": "The Crux",
     "time": " 1:00pm",
     "href": "/event/51d089bca3115c69242f09888baedb66",
@@ -1673,6 +1770,7 @@
   },
   {
     "name": "Le Fleur",
+    "tw": "lefleurgang",
     "venue": "Main Stage",
     "time": " 1:00pm",
     "href": "/event/7ce24a27b0181c07fdfb0ee074320fba",
@@ -1697,6 +1795,7 @@
   },
   {
     "name": "Social Studies",
+    "tw": "socialstudiessf",
     "venue": "Main Stage",
     "time": " 2:15pm",
     "href": "/event/5b0b804ca866bf0589dd69df21e6e088",
@@ -1745,6 +1844,7 @@
   },
   {
     "name": "Blackcloud",
+    "tw": "BlackcloudNW",
     "venue": "Linen Building",
     "time": " 4:10pm",
     "href": "/event/5f5e7c7c8f685c0af7d92e4701f0dc37",
@@ -1777,6 +1877,7 @@
   },
   {
     "name": "The Awful Truth",
+    "tw": "awfultruth",
     "venue": "The Crux",
     "time": " 5:00pm",
     "href": "/event/a50de35e62b67e63fa579a846fb31d2b",
@@ -1785,6 +1886,7 @@
   },
   {
     "name": "Youth Lagoon",
+    "tw": "youthlagoon",
     "venue": "Main Stage",
     "time": " 5:30pm",
     "href": "/event/06d1845782fb9788b11493068fb2c57e",
@@ -1809,6 +1911,7 @@
   },
   {
     "name": "AudioAvi8r",
+    "tw": "AudioAvi8r",
     "venue": "Pengilly's Saloon",
     "time": " 6:00pm",
     "href": "/event/ccf125072a1bb607eb9a9373445efa10",
@@ -1841,6 +1944,7 @@
   },
   {
     "name": "Dan Deacon",
+    "tw": "ebaynetflix",
     "venue": "Main Stage",
     "time": " 6:45pm",
     "href": "/event/ae85ffa0afdff56a61e8ef7dc430f47a",
@@ -1857,6 +1961,7 @@
   },
   {
     "name": "The Grizzled Mighty",
+    "tw": "GrizzledMighty",
     "venue": "Neurolux",
     "time": " 7:00pm",
     "href": "/event/b2a2bff694fa89d2ad1ce8d25d1b040b",
@@ -1865,6 +1970,7 @@
   },
   {
     "name": "The Foxxtones",
+    "tw": "TheFoxxtones",
     "venue": "Pengilly's Saloon",
     "time": " 7:00pm",
     "href": "/event/e4bb9b0cb90da8658ee089582215e863",
@@ -1873,6 +1979,7 @@
   },
   {
     "name": "Lucid Aisle",
+    "tw": "lucidaisle",
     "venue": "Red Room",
     "time": " 7:00pm",
     "href": "/event/dcaf91f464122c7fa0853f904c577dae",
@@ -1881,6 +1988,7 @@
   },
   {
     "name": "You Are Plural",
+    "tw": "youareplural",
     "venue": "The Crux",
     "time": " 7:00pm",
     "href": "/event/4efb147162b4833209c7c32690b03f8e",
@@ -1921,6 +2029,7 @@
   },
   {
     "name": "Customary",
+    "tw": "customarymusic",
     "venue": "Neurolux",
     "time": " 8:00pm",
     "href": "/event/527e7df912c7ce89133c5e3142221489",
@@ -1929,6 +2038,7 @@
   },
   {
     "name": "Ben Fisher",
+    "tw": "benbfisher",
     "venue": "Pengilly's Saloon",
     "time": " 8:00pm",
     "href": "/event/cc5f67e471333924f1b063b33e4f7505",
@@ -1937,6 +2047,7 @@
   },
   {
     "name": "School Knights",
+    "tw": "SchoolKnights",
     "venue": "Red Room",
     "time": " 8:00pm",
     "href": "/event/a3ec2add413660a3ba1ff042d9d7d0b9",
@@ -1961,6 +2072,7 @@
   },
   {
     "name": "High Desert Band",
+    "tw": "HighDesertBand",
     "venue": "Tom Grainey's",
     "time": " 8:00pm",
     "href": "/event/04ad270719a9b557ff35ba2d803f3976",
@@ -1969,6 +2081,7 @@
   },
   {
     "name": "Animal Collective",
+    "tw": "anmlcollective",
     "venue": "Main Stage",
     "time": " 8:30pm",
     "href": "/event/a9c0953e7ddb3ff97385a39b52fad715",
@@ -1977,6 +2090,7 @@
   },
   {
     "name": "Exit Prose",
+    "tw": "exitprose",
     "venue": "The Reef",
     "time": " 8:50pm",
     "href": "/event/8eac77a2348d5eac94593c5025f61872",
@@ -2009,6 +2123,7 @@
   },
   {
     "name": "In The Whale",
+    "tw": "inthewhale",
     "venue": "Red Room",
     "time": " 9:00pm",
     "href": "/event/1b09dd587619a76328be71befe7bc5ba",
@@ -2033,6 +2148,7 @@
   },
   {
     "name": "Camper Van Beethoven",
+    "tw": "CamperBeethoven",
     "venue": "El Korah Shrine",
     "time": " 9:00pm",
     "href": "/event/a3ab1422b8d9fea714d39339256b2f2a",
@@ -2041,6 +2157,7 @@
   },
   {
     "name": "Dedicated Servers",
+    "tw": "The_Dedicated",
     "venue": "The Reef",
     "time": " 9:40pm",
     "href": "/event/cb6ee52b0d32ea1738501b52004a9cb2",
@@ -2049,6 +2166,7 @@
   },
   {
     "name": "Emily Wells",
+    "tw": "emilywellsmusic",
     "venue": "Neurolux",
     "time": "10:00pm",
     "href": "/event/e9bb0fef4e0f0b0389d1ae20830e2b63",
@@ -2065,6 +2183,7 @@
   },
   {
     "name": "The Blank Tapes",
+    "tw": "theblanktapes",
     "venue": "Red Room",
     "time": "10:00pm",
     "href": "/event/f808a75f5bad22957f5c0237f912ffde",
@@ -2081,6 +2200,7 @@
   },
   {
     "name": "Dead Winter Carpenters",
+    "tw": "dwcarpenters",
     "venue": "Tom Grainey's",
     "time": "10:00pm",
     "href": "/event/3dce07520ee5e2eeb1fadf23b6157238",
@@ -2089,6 +2209,7 @@
   },
   {
     "name": "Deathfix",
+    "tw": "Deathfix1",
     "venue": "Linen Building",
     "time": "10:00pm",
     "href": "/event/ce9f4cbff2f3a4eb5c6913b8ca6c8466",
@@ -2097,6 +2218,7 @@
   },
   {
     "name": "Built To Spill (covers set)",
+    "tw": "Built_2_Spill",
     "venue": "El Korah Shrine",
     "time": "10:10pm",
     "href": "/event/6e7c7c7430894e84dd0e215fc6cb3855",
@@ -2105,6 +2227,7 @@
   },
   {
     "name": "Dark Time Sunshine",
+    "tw": "DrkTimeSunshine",
     "venue": "The Reef",
     "time": "10:40pm",
     "href": "/event/fdea4dc5ed1371a5ed470f083933eab3",
@@ -2113,6 +2236,7 @@
   },
   {
     "name": "Grass Widow",
+    "tw": "GrassWidowMusic",
     "venue": "Red Room",
     "time": "11:00pm",
     "href": "/event/9781a09b2e0502a3b44e481a77527097",
@@ -2129,6 +2253,7 @@
   },
   {
     "name": "THEESatisfaction",
+    "tw": "STASandCAT",
     "venue": "Neurolux",
     "time": "11:00pm",
     "href": "/event/72a860a8c40f6c6be8239a76c6446351",
@@ -2137,6 +2262,7 @@
   },
   {
     "name": "Ned Evett & Triple Double",
+    "tw": "nedevett",
     "venue": "Pengilly's Saloon",
     "time": "11:00pm",
     "href": "/event/fe9a84349784abbc2ed933ea42c585f2",
@@ -2145,6 +2271,7 @@
   },
   {
     "name": "Henhouse Prowlers",
+    "tw": "hhp",
     "venue": "Tom Grainey's",
     "time": "11:00pm",
     "href": "/event/8a58e0fc19d416eaa6db5380246f06cc",
@@ -2153,6 +2280,7 @@
   },
   {
     "name": "Dauwd",
+    "tw": "dauwd",
     "venue": "Linen Building",
     "time": "11:30pm",
     "href": "/event/f2fd2978947539d46da50d7abb341cd9",
@@ -2161,6 +2289,7 @@
   },
   {
     "name": "Brother Ali",
+    "tw": "BrotherAli",
     "venue": "The Reef",
     "time": "11:45pm",
     "href": "/event/860d72b5958141d0cacc980ab82c397e",
@@ -2185,6 +2314,7 @@
   },
   {
     "name": "Karaoke From Hell",
+    "tw": "KaraokeFromHell",
     "venue": "El Korah Shrine",
     "time": "12:00am",
     "href": "/event/236debc53556f4e03fe185d6160d91f3",
@@ -2209,6 +2339,7 @@
   },
   {
     "name": "Dan Deacon (DJ set)",
+    "tw": "ebaynetflix",
     "venue": "Linen Building",
     "time": "12:30am",
     "href": "/event/d4b6f332764891b239f49070fe3c88ad",
