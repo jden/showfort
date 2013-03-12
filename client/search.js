@@ -11,10 +11,7 @@ $(function () {
   $searchBar = $('nav.search')
   $search = $('#search')
   $search.on('keyup', update)
-  $('#search-clear').on('click', function () {
-    $search.val('')
-    update()
-  })
+  $('#search-clear').on('click', clearSearch)
   $('#favetoggle').on('click', toggleFaveFilter)
 })
 
@@ -40,6 +37,12 @@ function faveFilterOn() {
   cache()
   $('#favetoggle').removeClass('off').addClass('on')
   faveFilter = true
+  update()
+}
+
+function clearSearch() {
+  $search.val('')
+  $search.focus()
   update()
 }
 
@@ -108,7 +111,7 @@ function update() {
     if (faveFilter) {
       match = match && show.fave === true
     }
-    console.log(match, searching, faveFilter, show.name)
+
     if (match) {
       headers[key]++
     } else {
@@ -118,7 +121,6 @@ function update() {
   })
   matching.true = matching.true || []
   matching.false = matching.false || []
-  console.log(search, matching)
 
   matching.false.map(toId).forEach(function (id) {
     cache._[id].style.display = 'none'
@@ -129,7 +131,7 @@ function update() {
   })
 
   _.forEach(cache.headers, function (header, key) {
-    console.log(header.c, headers[key], header.c + headers[key], key)
+
     if (header.c + headers[key] > 0) {
       header.el.style.display = 'list-item'
     } else {

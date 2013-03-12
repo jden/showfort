@@ -6,28 +6,38 @@ var search = require('./search')
 var about = require('./about')
 require('./scrollMgr')
 var shows = require('./data/shows')
-var users = require('./data/users')
 
 
-shows.all().then(function (shows) {
-window.shows = shows
-  var html = ''
+$(render)
 
-  var s = _.sortBy(shows, 'timestamp')
-  s = _.groupBy(s, 'day')
+function render() {
+  shows.all().then(function (shows) {
 
-  _.forEach(s, function (shows, day) {
-    
-    html += tGroup('Day ' + day, 'day')
+  window.shows = shows
+    var html = ''
 
-    var s = _.groupBy(shows, 'hour')
-    _.forEach(s, function (shows, hour) {
-      html += tGroup(hour, 'hour', 'h'+day+hour.replace(':',''))
-      html += shows.map(tShow).join('')
+    var s = _.sortBy(shows, 'timestamp')
+    s = _.groupBy(s, 'day')
+
+    _.forEach(s, function (shows, day) {
+      
+      html += tGroup('Day ' + day, 'day')
+
+      var s = _.groupBy(shows, 'hour')
+      _.forEach(s, function (shows, hour) {
+        html += tGroup(hour, 'hour', 'h'+day+hour.replace(':',''))
+        html += shows.map(tShow).join('')
+      })
+
     })
 
+    $('#shows').append(html) 
   })
+}
 
-  $('#shows').append(html) 
-
-})
+setTimeout(function () {
+  // try re-rendering if it failed the first time (slow phones)
+  if ($('#shows .show').length < 100) {
+    render()
+  }
+}, 2000)
