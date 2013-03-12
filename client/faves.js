@@ -6,37 +6,10 @@ var IndexedArray = require('indexed-array')
 var users = require('./data/users')
 var shows = require('./data/shows')
 
-$(function () {
-  $('#favetoggle').on('click', toggle)
-})
-
-var faveFilter = false
-function toggle(e) {
-  e.preventDefault()
-
-  if (faveFilter) {
-    off()
-  } else {
-    on()
-  }
-}
-
-function off() {
-  $('#favetoggle').removeClass('on').addClass('off')
-  faveFilter = false
-}
-
-function on() {
-  $('#favetoggle').removeClass('off').addClass('on')
-  faveFilter = true
-}
-
-
 module.exports = {
   fave: fave,
   unfave: unfave
 }
-
 
 function get(type, id) {
   if (type === 'show') {
@@ -48,6 +21,7 @@ function fave(type, id) {
   var thing = get(type, id)
   return users.authenticated('adding ' +thing.name + ' as a fave',
     function () {
+      thing.fave = true
       return http.put({url: '/' + type + 's/' + id + '/fave'})
     })
 }
@@ -56,6 +30,7 @@ function unfave(type, id) {
   var thing = get(type, id)
   return users.authenticated('removing ' +thing.name + ' as a fave',
     function () {
+      thing.fave = false
       return http.delete({url: '/' + type + 's/' + id + '/fave'})
     })
 }

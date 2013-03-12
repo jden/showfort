@@ -11,8 +11,37 @@ $(function () {
   $searchBar = $('nav.search')
   $search = $('#search')
   $search.on('keyup', update)
+  $('#search-clear').on('click', function () {
+    $search.val('')
+    update()
+  })
+  $('#favetoggle').on('click', toggleFaveFilter)
 })
 
+var faveFilter = false
+function toggleFaveFilter(e) {
+  e.preventDefault()
+
+  if (faveFilter) {
+    faveFilterOff()
+  } else {
+    faveFilterOn()
+  }
+}
+
+function faveFilterOff() {
+  cache()
+  $('#favetoggle').removeClass('on').addClass('off')
+  faveFilter = false
+  update()
+}
+
+function faveFilterOn() {
+  cache()
+  $('#favetoggle').removeClass('off').addClass('on')
+  faveFilter = true
+  update()
+}
 
 function toggle(e) {
   e.preventDefault()
@@ -57,7 +86,7 @@ function cache() {
   _.forEach(headers, function (shows, header) {
     cache.headers[header] = {c: shows.length, el: document.getElementById(header) }
   })
-  console.log(cache.headers)
+  console.log('ch', cache.headers)
 }
 function clearCache(){
   delete cache._
@@ -72,8 +101,14 @@ function update() {
     var key = headerCacheKey(show)
     headers[key] = headers[key] || 0
 
-    var match = s.test(show.name)
-    
+    var match = true
+    if (searching) {
+      match = match && s.test(show.name)
+    }
+    if (faveFilter) {
+      match = match && show.fave === true
+    }
+    console.log(match, searching, faveFilter, show.name)
     if (match) {
       headers[key]++
     } else {
