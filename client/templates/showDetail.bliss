@@ -5,7 +5,7 @@
 </div>
 <div class="detail">
   <div class="showctl">
-    <a class="button hashtag"><span class="icon-twitter"></span>@show.hashtag</a>
+    <a class="button hashtag" href="https://twitter.com/intent/tweet?&hashtags=@show.hashtag" target="_blank"><span class="icon-twitter"></span>#@show.hashtag</a>
     <a class="button comment"><span class="icon-comment"></span> add</a>
     <a class="button fave"><span class="icon-star"></span> fave</a>
   </div>

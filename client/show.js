@@ -9,6 +9,13 @@ $(function () {
 
 $('#shows').on(ev, '.listing', toggle)
 
+// $('#shows').on(ev, '.button.hashtag', function () {
+//   var tag = $(this).text()
+//   tag = tag.substr(tag.indexOf('#')+1)
+//   console.log('ht', tag)
+//   document.location.href = 'https://twitter.com/intent/tweet?&hashtags='+tag
+// })
+
 })
 
 function toggle(e) {
