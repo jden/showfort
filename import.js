@@ -43,3 +43,10 @@ minq.verbose = true
 rawData.map(Show).forEach(function (show) {
   minq.collection('shows').insert(show)
 })
+
+minq.collection('users').insert({
+  username: 'jden',
+  bio: 'real life awesome dude',
+  faves: [],
+  friends: []
+})

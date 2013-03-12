@@ -3,7 +3,7 @@ var shows = require('./data/shows')
 
 $(function () {
 
-  $('.content').on('scroll', _.throttle(scroll, 100))
+  $('.content').on('scroll', _.debounce(scroll, 75))
 })
 
 var currentDay

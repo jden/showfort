@@ -3,6 +3,7 @@ var passport = require('passport')
 
 var client = require('./client/server')
 var shows = require('./core/shows')
+var users = require('./core/users')
 
 // requestHandlers
 //
@@ -31,15 +32,21 @@ wham('shows list', '/shows')
 wham('show comments', '/shows/8ba4a2177aef90c068bcd108/comments')
   .get(shows.getCommentsById, 'req.params.id')
 
+wham('me', '/me')
+  .get(users.me, 'req.user')
+
+wham('login or register', '/login') //like a boss
+  .post(users.login)
+
 module.exports = wham.bam
 
 function fakeSession(req, res, next) {
   req.user = {
-    _id: '4343534t43t43t3443543',
-    name: 'jden',
+    _id: require('minq').ObjectId().toString(),
+    username: 'jden',
+    bio: 'real life awesome dude',
     faves: [],
-    upvoted: [],
-    downvoted: []
+    friends: []
   }
   next()
 }

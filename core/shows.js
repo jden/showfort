@@ -9,7 +9,7 @@ var listProjection = {
   hashtag: 1,
   timestamp: 1,
   timeclass: 1,
-  score: 1
+  faves: 1
 }
 
 var list = function (skip, limit) {
@@ -37,6 +37,8 @@ var renderShows = function (shows, user) {
     if (show.venue === 'v3') {
       show.faves = ['bob','jim','sue','mary']
     }
+    show.score = show.faves.length
+    delete show.faves
   })
   return shows
 }

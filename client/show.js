@@ -2,6 +2,7 @@ var shows = require('./data/shows')
 var venues = require('./data/venues')
 var tShowDetails = require('./templates/showDetail.bliss')
 var tComments = require('./templates/comments.bliss')
+var comments = require('./data/comments')
 //require('./vclick')
 var ev = ('ontouchend' in window) ? 'touchend' : 'click' 
 
@@ -15,6 +16,8 @@ $('#shows').on(ev, '.listing', toggle)
 //   console.log('ht', tag)
 //   document.location.href = 'https://twitter.com/intent/tweet?&hashtags='+tag
 // })
+
+$('#shows').on(ev, '.button.comment', addComment)
 
 })
 
@@ -49,6 +52,11 @@ function collapse() {
   console.log('collapsing', this)
   $('.detail, .showinfo', this).remove()
   $(this).removeClass('expanded')
+}
+
+function addComment() {
+  var $listing = $(this).closest('.listing')
+  comments.postComment('shows', $listing[0].id) 
 }
 
 function lazyLoadComments(show, $show) {

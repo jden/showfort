@@ -5,8 +5,10 @@ var show = require('./show')
 var search = require('./search')
 var about = require('./about')
 require('./scrollMgr')
-
 var shows = require('./data/shows')
+var users = require('./data/users')
+
+
 shows.all().then(function (shows) {
 window.shows = shows
   var html = ''
