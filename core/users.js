@@ -41,25 +41,32 @@ exports.getByIdN = function (id, cb) {
 }
 
 exports.ensureAuthenticated = function (req, res, next) {
-  console.log('AUTHN', req)
+  //console.log('AUTHN', req)
   next()
 }
 
 exports.authenticate = function (user, pass, done) {
-  minq.from('users')
-    .where({name: user, hashedPassword: hash(pass) })
-    .one(function (user) {
-      if (user) {
-        done(null, true)
-      }
-      done(null, false)
-    }, done)
+  hash(pass).then(function (hashed) {
+    console.log('authenticating', user, hashed)
+    minq.from('users')
+      .where({name: user, hashedPassword: hashed })
+      .one(function (user) {
+        if (user) {
+          done(null, true)
+        }
+        done(null, false)
+      }, done)
+  })
+
 }
 
 function register(username, hashedPassword) {
 
 }
 
+// @returns Promise<String>
 function hash(password) {
-  return crypto.pbkdf2Sync(password, secret, 10, 64)
+  console.log('XFSD', crypto)
+  console.log('sfef', crypto.pbkdf2)
+  return Q.ninvoke(crypto, 'pbkdf2', password, secret, 10, 64)
 }
