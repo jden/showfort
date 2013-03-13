@@ -1,8 +1,5 @@
 tasks:
 
-- lazy load comments
--- wham url param parsing (steal from express)
-
 - venue view
 
 - fave and comment on venues

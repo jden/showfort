@@ -1,5 +1,6 @@
 var wham = require('wham')('treefortApi')
-var passport = require('passport')
+var connect = require('connect')
+var snap = require('snap')
 
 var client = require('./client/server')
 var shows = require('./core/shows')
@@ -8,14 +9,23 @@ var users = require('./core/users')
 // requestHandlers
 //
 
-wham.use(fakeSession)
-wham.use(logReq)
-//wham.use(connect.session({secret: 'trees' }))
-//wham.use(passport.initialize())
-//wham.use(passport.session())
+wham.use(connect.bodyParser())
 
-// responseHandlers
-//
+module.exports = function init (port) {
+  snap(wham,
+  {
+    secret: 'HELLZYASHOWFORT',
+    connectionString: process.env.connectionString,
+    authenticate: users.authenticate,
+    deserializeUser: users.getByIdN
+  },  
+  wham.bam.bind(this, port))
+}
+
+
+//wham.use(connect.favicon('')) //http://www.senchalabs.org/connect/favicon.html
+//wham.use(fakeSession)
+wham.use(logReq)
 
 // endpoints
 //
@@ -29,7 +39,7 @@ wham('client assets', '/public')
 wham('shows list', '/shows')
   .get(shows.list, 'req.query.skip', 'req.query.limit', 'req.user')
 
-wham('show comments', '/shows/8ba4a2177aef90c068bcd108/comments')
+wham('show comments', '/shows/:id/comments')
   .get(shows.getCommentsById, 'req.params.id')
 
 wham('me', '/me')
@@ -37,8 +47,6 @@ wham('me', '/me')
 
 wham('login or register', '/login') //like a boss
   .post(users.login)
-
-module.exports = wham.bam
 
 function fakeSession(req, res, next) {
   req.user = {
@@ -52,6 +60,6 @@ function fakeSession(req, res, next) {
 }
 
 function logReq(req, res, next) {
-  console.log(req.path, req.query, req.method, req.user.name)
+  console.log(req.path, req.query, req.method, req)
   next()
 }

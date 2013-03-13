@@ -1,3 +1,5 @@
+process.env.connectionString = process.env.connectionString || 'mongodb://localhost/treefort'
+
 var web = require('./web')
 var minq = require('minq')
 minq.verbose = true
@@ -5,7 +7,7 @@ minq.verbose = true
 process.on('error', error)
 
 console.log('building a treefort...')
-minq.connect(process.env.connectionString || 'mongodb://localhost/treefort')
+minq.connect(process.env.connectionString)
 
 var port = process.env.NODE_ENV === 'production' ? 80 : 8000 
 web(port)

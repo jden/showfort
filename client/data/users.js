@@ -64,9 +64,9 @@ function register(action) {
     function checkRegistrationForm() {
       var $msg = $('#continuationMsg')
       var user = $('#register-user').val()
-      var pass = $('#register-user').val()
+      var pass = $('#register-pass').val()
 
-      if(/^[a-zA-Z0-9]+/.test(user) && pass.length > 4) {
+      if(/^[a-zA-Z0-9]+$/.test(user) && pass.length > 4) {
         sendRegistration(user, pass).then(function () {
           $msg.text('You\'re all set. Tell all yr friends.')
           setTimeout(function () {
