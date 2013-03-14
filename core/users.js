@@ -13,21 +13,20 @@ var userSessionProjection = {
 }
 
 exports.userify = function (req, res, next) {
-  console.log(res.cookie, req.cookies)
   if (req.cookies && req.cookies.get('showfortid')) {
     minq.from('users')
       .where({sid: req.cookies.get('showfortid') })
       .one()
       .then(function (user) {
         req.user = user
-        console.log('fetched session user from db', user)
+        //console.log('fetched session user from db', user)
         next()
       }, function (e) {
         console.error(e)
         next()
       })
   } else {
-    console.log('no session')
+    //console.log('no session')
     next() 
   }
 }

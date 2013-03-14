@@ -61,6 +61,6 @@ function fakeSession(req, res, next) {
 }
 
 function logReq(req, res, next) {
-  console.log(req.path, req.query, req.method, req.body, req.session, req.user)
+  console.log(Date.now(), req.path, req.query, req.method, req.user && req.user.name)
   next()
 }
