@@ -1,5 +1,12 @@
 tasks:
 
+- custom redirect page
+- favicons
+- welcome instructions to save favorites (or my faves thing, or text with the fave filter turned on and no favorites saved)
+- touch events
+- enter to log in
+
+
 - venue view
 
 - fave and comment on venues
