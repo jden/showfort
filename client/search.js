@@ -44,6 +44,7 @@ function clearSearch() {
   $search.val('')
   $search.focus()
   update()
+  hide()
 }
 
 function toggle(e) {
