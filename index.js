@@ -2,7 +2,7 @@ process.env.connectionString = process.env.connectionString || 'mongodb://localh
 
 var web = require('./web')
 var minq = require('minq')
-//minq.verbose = true
+minq.verbose = true
 
 process.on('error', error)
 

@@ -1,5 +1,6 @@
 var minq = require('minq')
 var IndexedArray = require('indexed-array')
+var Q = require('q')
 
 var listProjection = {
   name: 1,
@@ -14,7 +15,6 @@ var listProjection = {
 }
 
 var list = function (skip, limit) {
-  console.log('LIST', arguments)
   skip = skip || 0
   limit = limit || 500
   return minq
@@ -25,18 +25,11 @@ var list = function (skip, limit) {
     .toArray()
 }
 
-exports.getUserByName = function (username) {
-  return minq
-    .from('users')
-    .where({name: username})
-    .one()
-}
-
 var renderShows = function (shows, user) {
 
   shows.forEach(function (show) {
-    if (show.venue === 'v3') {
-      show.faves = ['bob','jim','sue','mary']
+    if (user && show.faves && show.faves.indexOf(user.name) >= 0) {
+      show.fave = true
     }
     show.score = show.faves.length
     delete show.faves
@@ -45,26 +38,36 @@ var renderShows = function (shows, user) {
 }
 
 exports.list = function (skip, limit, user) {
-  var shows = list(skip, limit)
-  if (!user) return shows;
-
-  return shows.then(function (shows) {
-    return renderShows(shows)
+  return list(skip, limit).then(function (shows) {
+    return renderShows(shows, user)
   })
 }
 
 exports.faveShow = function (username, showId) {
-  return minq
-    .from('users')
-    .where({name: username})
-    .update({$addToSet: {faves: minq.ObjectId(showId)}})
+  console.log('faveshow', arguments)
+  return Q.all([
+    minq
+      .from('users')
+      .where({name: username})
+      .update({$addToSet: {'faves.shows': minq.ObjectId(showId)}}),
+    minq
+      .from('shows')
+      .byId(showId)
+      .update({$addToSet: {faves: username}})
+  ])
 }
 
 exports.unfaveShow = function (username, showId) {
-  return minq
-    .from('users')
-    .where({name: username})
-    .update({$pull: {faves: minq.ObjectId(showID)}})
+  return Q.all([
+    minq
+      .from('users')
+      .where({name: username})
+      .update({$pull: {'faves.shows': minq.ObjectId(showId)}}),
+    minq
+      .from('shows')
+      .byId(showId)
+      .update({$pull: {faves: username}})
+  ])
 }
 
 exports.getCommentsById = function (showId) {

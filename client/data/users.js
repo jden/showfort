@@ -41,16 +41,13 @@ function meSync(){
 }
 
 function authenticated(action, fn) {
-  return me().then(function user() {
+  return me().then(function (user) {
     if (!user) {
       return register(action).then(function () {
         return fn.call(user)
       })
     }
-    return register(action).then(function () {
-        return fn.call(user)
-      })
-    //return fn.call(user)
+    return fn.call(user)
   })  
 }
 
@@ -68,11 +65,12 @@ function register(action) {
 
       if(/^[a-zA-Z0-9]+$/.test(user) && pass.length > 4) {
         sendRegistration(user, pass).then(function () {
-          $msg.text('You\'re all set. Tell all yr friends.')
-          setTimeout(function () {
+          $('#signup h2').html('You\'re all set.<br/>Tell all yr friends.').delay(750).fadeOut(function () {
             cleanup()
+            $('#signup').remove()
             resolve()
-          }, 500)
+          })
+          $('#signup .input-group, #signup-cancel, #continuationMsg, .button-main').hide()
         }, function () {
           $msg.text('We couldn\t talk to the internet right now. Bummer. Please try again in a minute.')
           $('#signup-cancel').text('try later')

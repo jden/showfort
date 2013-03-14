@@ -49,8 +49,14 @@ function makeSession(req, res, username) {
 }
 
 exports.me = function (user) {
-  var u = _.cloneDeep(user)
-  //delete u.password
+  if (!user) {
+    return Q.resolve()
+  }
+  var u = {
+    bio: user.bio,
+    faves: user.faves,
+    name: user.name
+  }
   return Q.resolve(u)
 }
 

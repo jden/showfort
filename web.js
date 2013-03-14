@@ -36,6 +36,10 @@ wham('shows list', '/shows')
 wham('show comments', '/shows/:id/comments')
   .get(shows.getCommentsById, 'req.params.id')
 
+wham('show faves', '/shows/:id/fave')
+  .put(shows.faveShow, 'req.user.name', 'req.params.id')
+  .delete(shows.unfaveShow, 'req.user.name', 'req.params.id')
+
 wham('me', '/me')
   .get(users.me, 'req.user')
 
