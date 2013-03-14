@@ -32,7 +32,11 @@
     "lodash": "~1.0.1",
     "like": "~0.1.0",
     "connect-mongo": "~0.3.2",
-    "snap": "~0.2.0"
+    "snap": "~0.2.0",
+    "muddle": "~1.0.0",
+    "passport-local": "~0.1.6",
+    "mongodb": "~1.2.13",
+    "cookies": "~0.3.6"
   },
   "subdomain": "showfort",
   "engines": {

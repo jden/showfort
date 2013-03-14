@@ -14,9 +14,11 @@ var files = ecstatic({ root: __dirname + '/public' })
 module.exports = function (req, res) {
   for (var path in req.query) {}
   req.url = path || '/index.html'
-
-
+  
   if (req.url === '/bundle.js') {
+    // try { req.session.reload() } catch (e) {
+    //   console.log(e)
+    // }
     res.setHeader('Content-Type', 'text/javascript')
     res.send(bundle)
     return
