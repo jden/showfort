@@ -175,6 +175,28 @@ border: 1px solid #CC521A;
 color: #fff;
 }
 
+.detail .faves {
+  margin: 5px 0;
+}
+.detail .faves a:after{
+  content: ',';
+}
+.detail .faves a:last-child:after{
+  content: '';
+}
+.detail .faves a:first-child:before{
+  font-family: ;
+  content: "\f005";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 5px;
+}
+.faves .user{
+  color: #334;
+}
 .comments{
   list-style: none;
 }

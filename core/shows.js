@@ -71,13 +71,22 @@ exports.unfaveShow = function (username, showId) {
 }
 
 exports.getCommentsById = function (showId) {
-  showId = '8ba4a2177aef90c068bcd108'
   return minq
     .from('shows')
     .byId(showId)
     .select({comments: 1})
     .one().then(function (show) {
       return show.comments
+    })
+}
+
+exports.getFavesById = function (showId) {
+  return minq
+    .from('shows')
+    .byId(showId)
+    .select({faves: 1})
+    .one().then(function (show) {
+      return show.faves
     })
 }
 

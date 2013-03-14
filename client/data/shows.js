@@ -46,6 +46,10 @@ function commentsById(id) {
   return Q($.ajax('/shows/'+id+'/comments'))
 }
 
+module.exports.favesById = function (id) {
+  return Q($.ajax('/shows/'+id+'/faves'))
+}
+
 function sync(){
   return _shows
 }

@@ -3,6 +3,7 @@ var venues = require('./data/venues')
 var tShowDetails = require('./templates/showDetail.bliss')
 var tComments = require('./templates/comments.bliss')
 var comments = require('./data/comments')
+var tFaves = require('./templates/faves.bliss')
 var faves = require('./faves')
 //require('./vclick')
 var ev = ('ontouchend' in window) ? 'touchend' : 'click' 
@@ -46,7 +47,8 @@ function expand() {
     var venue = venues[show.venue]
     var details = tShowDetails(show, venue)
     $show.append(details)
-    lazyLoadComments(show, $show)
+    lazyLoadFaves(show, $show)
+    //lazyLoadComments(show, $show)
   }).done()
 }
 
@@ -66,6 +68,15 @@ function lazyLoadComments(show, $show) {
   shows.commentsById(show._id).then(function (comments){
     var comments = tComments(comments)
     $show.find('.comments').empty().append(comments)
+  })
+}
+
+function lazyLoadFaves(show, $show) {
+  shows.favesById(show._id).then(function (faves){
+    console.log('faves!', faves)
+    var faves = tFaves(faves)
+    console.log('faves', faves)
+    $show.find('.faves').empty().append(faves)
   })
 }
 
