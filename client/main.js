@@ -6,6 +6,7 @@ var search = require('./search')
 var about = require('./about')
 require('./scrollMgr')
 var shows = require('./data/shows')
+var users = require('./data/users')
 
 
 $(render)
@@ -32,6 +33,15 @@ function render() {
     })
 
     $('#shows').append(html) 
+  })
+
+  $('#notice').on('click', function () {
+    $('#notice').hide()
+  })
+  $('#notice').on('click', '.login-btn', function () {
+    users.authenticated(false, function () {
+      // logged in
+    })
   })
 }
 

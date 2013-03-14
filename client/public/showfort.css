@@ -23,6 +23,27 @@ header .button .icon-star, header .button.icon-search{
 #favetoggle.on .icon-star:before  { content: "\f005"; }
 #favetoggle.off .icon-star:before { content: "\f006"; }
 
+#notice{
+  width: 100%;
+  margin: 0;
+  display: none;
+  line-height: 50px;
+  background: #445;
+  color: #fff;
+  padding: 0 10px;
+}
+#notice #dismiss{
+  position: absolute;
+  right: 34px;
+  top: 12px;
+  color: #fff;
+  font-size: 26px;
+  font-weight: normal;
+}
+#notice .login-btn{
+  vertical-align: middle;
+}
+
 nav.search{
   position: absolute;
   z-index: 100000;

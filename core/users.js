@@ -33,13 +33,12 @@ exports.userify = function (req, res, next) {
 }
 
 function makeSession(req, res, username) {
-    console.log('boo')
   try {
     var sid = minq.ObjectId().toString()
     res.cookies.set('showfortid', sid, { expires: new Date(Date.now() + 30*24*60*60*1000), httpOnly: true, overwrite: true });
     console.log('made session', sid)
   } catch (e) {
-    console.log('foo', e, e.stack)
+    console.log('could not make session for ', username, e, e.stack)
     return Q.reject(e)
   }
 
@@ -48,15 +47,18 @@ function makeSession(req, res, username) {
     .update({$set: {sid: sid}})
 }
 
-exports.me = function (user) {
-  if (!user) {
-    return Q.resolve()
-  }
-  var u = {
+function makeUserResp(user) {
+  return {
     bio: user.bio,
     faves: user.faves,
     name: user.name
   }
+}
+exports.me = function (user) {
+  if (!user) {
+    return Q.resolve()
+  }
+  var u = makeUserResp(user)
   return Q.resolve(u)
 }
 
@@ -72,7 +74,7 @@ exports.login = function (req, res) {
     console.log('login request form ', username)
     delete req.body.pass
     minq.from('users')
-      .where({name: username})
+      .where({name: minq.like(username)})
       .one()
       .then(function (user) {
         if (user) {
@@ -80,9 +82,9 @@ exports.login = function (req, res) {
           console.log('authn', user)
           if (user.hashedPassword === hashedPassword) {
             console.log(user.name + ' successfully authenticated')
-            makeSession(req, res, username)
+            makeSession(req, res, user.name)
               .then(function () {
-                return res.send(200)
+                return res.send(makeUserResp(user))
               }, function (e) {
                 console.error(e)
                 return res.send(500)

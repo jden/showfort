@@ -2,6 +2,7 @@ var like = require('like')
 var shows = require('./data/shows')
 var _ = require('lodash')
 var ev = ('ontouchend' in window) ? 'touchstart' : 'click' 
+var users = require('./data/users')
 
 var $searchBar
 var $search
@@ -36,6 +37,11 @@ function faveFilterOff() {
 function faveFilterOn() {
   cache()
   $('#favetoggle').removeClass('off').addClass('on')
+  console.log('users', users.meSync())
+  if (!users.meSync()) {
+    $('#notice-msg').html('Fave some shows to get back to them later. If you already have an account, <a class="button-main login-btn">log in</a>')
+    $('#notice').show()
+  }
   faveFilter = true
   update()
 }

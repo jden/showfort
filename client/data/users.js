@@ -13,9 +13,9 @@ function reload () {
     window.user = u
     user = Q.resolve(u)
     loaded = true
-    events.emit('loaded', user)
+    events.emit('loaded', _user)
   }, function () {
-    // not logged in
+    // not logged in, error
   })
 }
 
@@ -27,6 +27,13 @@ module.exports = {
   authenticated: authenticated
 }
 
+events.on('loaded', function (user) {
+  if (!user) {
+    $('#notice').show()
+  }
+})
+
+
 function me() {
   if (loaded) return user
   return Q.promise(function (resolve, reject) {
@@ -37,22 +44,29 @@ function me() {
 }
 
 function meSync(){
-  return me
+  return _user
 }
 
 function authenticated(action, fn) {
   return me().then(function (user) {
     if (!user) {
       return register(action).then(function () {
+        $('#notice-msg').text('Welcome, ' + _user.name + '!')
+        $('#notice').show()
         return fn.call(user)
       })
     }
+
     return fn.call(user)
   })  
 }
 
 function register(action) {
-  $('#continuationAction').text(action)
+  if (action) {
+    $('#continuationAction').text(action)
+  } else {
+    $('#continuationMsg').text('')
+  }
   $('#signup').show()
   return Q.promise(function (resolve, reject) {
     $('#signup .button-main').on('click', function (e) { e.preventDefault(); checkRegistrationForm() })
@@ -71,9 +85,14 @@ function register(action) {
             resolve()
           })
           $('#signup .input-group, #signup-cancel, #continuationMsg, .button-main').hide()
-        }, function () {
-          $msg.text('We couldn\t talk to the internet right now. Bummer. Please try again in a minute.')
-          $('#signup-cancel').text('try later')
+        }, function (e) {
+          if (e && e.status === 403) {
+            $msg.text('Incorrect username or password.')
+            $('#signup-cancel').text('try later')
+          } else {
+            $msg.text('We couldn\t talk to the internet right now. Bummer. Please try again in a minute.')
+            $('#signup-cancel').text('try later')            
+          }
         })
       } else {
         $msg.text('Oops. Your username should just have letters and numbers, and your password needs to be at least 5 characters')
@@ -81,7 +100,10 @@ function register(action) {
     }
 
     function sendRegistration(user, pass) {
-      return http.post({url: '/login', data: {user: user, pass: pass }})
+      return http.post({url: '/login', data: {user: user, pass: pass }}).then(function (rUser) {
+        _user = rUser
+        user = Q.resolve(rUser)
+      })
     }
 
     function close() {
