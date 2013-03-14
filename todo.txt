@@ -4,26 +4,15 @@ tasks:
 
 - fave and comment on venues
 
-- fave only view
-
-- registration / login flow
--- user session (connect/passport)
-
-- fave functionality
 - comment functionality
 
-x show day in title as you scroll down
 
 - performance tuning - pre-load band, venue data, only load the comments and scores and faves and stuff
 
 x wire up tweet link
--- default text to band's twitter
+xx default text to band's twitter
 
 on deck:
-- wham url pattern matching
-- create account
-- save fave
-- view faves
 - add comment / view comments / view all comments (instagram style)
 
 
@@ -36,6 +25,8 @@ embellishments:
 -- gzip
 -- cdn static assets
 -- localStorage cache
+
+-- fix so faves list is rerendered when changing faves thing
 
 - my forwarding frame thing so i can set proper browser zoom levels and stuff from the bare domain
 

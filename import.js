@@ -40,14 +40,14 @@ function timestamp(obj) {
 }
 
 var cs = 'mongodb://localhost/treefort'
-
+var cs = 'mongodb://tfweb:98jp3h98fjouhrf9834jf98@linus.mongohq.com:10065/treefort'
 minq.verbose = true
 minq.connect(cs)
 .then(function () {
-  minq.collection('users').drop()  
+  //minq.collection('users').drop()  
 })
 .then(function () {
-  return minq.collection('shows').drop()
+  //return minq.collection('shows').drop()
 })
 .then(function () {
 
@@ -55,16 +55,16 @@ minq.connect(cs)
     minq.collection('shows').insert(show)
   })
 
-  minq.collection('users').insert({
-    name: 'jden',
-    bio: 'real life awesome dude',
-    faves: {
-      shows: [],
-      venues: [],
-      users: []
-    }
-  })
+  // minq.collection('users').insert({
+  //   name: 'jden',
+  //   bio: 'real life awesome dude',
+  //   faves: {
+  //     shows: [],
+  //     venues: [],
+  //     users: []
+  //   }
+  // })
 
 }).then(function () {
-  process.exit()
+  //process.exit()
 }).done()
