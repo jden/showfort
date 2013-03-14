@@ -71,16 +71,27 @@ function lazyLoadComments(show, $show) {
 
 function fave(){
   var $show = $(this).closest('.show')
+  var $count = $show.find('.count')
   var id = $show[0].id
   if ($show.hasClass('faved')) {
     $show.removeClass('faved')
+    increment($count, -1)
     faves.unfave('show', id).then(null, function () {
       $show.addClass('faved')
+      increment($count, 1)
     })
   } else {
     $show.addClass('faved')
+    increment($count, 1)
     faves.fave('show', id).then(null, function () {
       $show.removeClass('faved')
+      increment($count, -1)
     })
   }
+}
+
+function increment($el, delta) {
+  var i = parseInt($el.text())
+  i += delta
+  $el.text(i)
 }
