@@ -17,7 +17,6 @@ function manage() {
   if (!started) {
     start()
   } else if (now - last > 99){
-    console.log('tick')
     $(document).trigger('scrollTick')
     last = now
   }
@@ -36,7 +35,6 @@ $(document).on('scrollTick, scrollEnd', debounce(updateTitle))
 var currentDay
 var currentTime
 function updateTitle() {
-  console.log('foo')
   var $el = $(document.elementFromPoint(2, 85))
   if (!$el.hasClass('show') && !($el = $el.next()).hasClass('show')) { return }
   var id = $el[0].id
@@ -51,7 +49,6 @@ function updateTitle() {
 function debounce(fn) {
   var timer
   return function () {
-    console.log('FOO')
     clearTimeout(timer)
     timer = setTimeout(fn, 100)
   }

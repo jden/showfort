@@ -150,9 +150,7 @@ nav.search{
 .v14{
   border-left-color: #f60;
 }
-.content{
-  -webkit-transform: translateZ(0);
-}
+
 @-webkit-keyframes flash{
   0% {
     /*background-color: #aaa;*/
