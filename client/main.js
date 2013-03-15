@@ -40,7 +40,7 @@ function render() {
   })
   $('#notice').on('click', '.login-btn', function () {
     users.authenticated(false, function () {
-      // logged in
+      // 
     })
   })
 }

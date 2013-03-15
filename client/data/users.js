@@ -53,6 +53,9 @@ function authenticated(action, fn) {
       return register(action).then(function () {
         $('#notice-msg').text('Welcome, ' + _user.name + '!')
         $('#notice').show()
+        if (_user.faves.shows.length) {
+          window.location.reload()
+        }
         return fn.call(user)
       })
     }
