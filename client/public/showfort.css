@@ -27,10 +27,11 @@ header .button .icon-star, header .button.icon-search{
   width: 100%;
   margin: 0;
   display: none;
-  line-height: 50px;
+  min-height: 50px;
   background: #445;
   color: #fff;
-  padding: 0 10px;
+  padding: 10px 10px;
+  line-height: 20px;
 }
 #notice #dismiss{
   position: absolute;
@@ -42,6 +43,9 @@ header .button .icon-star, header .button.icon-search{
 }
 #notice .login-btn{
   vertical-align: middle;
+}
+#notice-msg{
+  padding-right: 50px;
 }
 
 nav.search{

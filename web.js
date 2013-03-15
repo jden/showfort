@@ -1,6 +1,5 @@
 var wham = require('wham')('treefortApi')
 var connect = require('connect')
-var snap = require('./snap')
 var cookies = require('cookies').express()
 
 var client = require('./client/server')
@@ -11,12 +10,8 @@ var users = require('./core/users')
 //
 
 wham.use(connect.bodyParser())
-
 wham.use(cookies)
 wham.use(users.userify)
-
-//wham.use(connect.favicon('')) //http://www.senchalabs.org/connect/favicon.html
-//wham.use(fakeSession)
 wham.use(logReq)
 
 module.exports = wham.bam
@@ -49,16 +44,6 @@ wham('me', '/me')
 wham('login or register', '/login') //like a boss
   .post(users.login)
 
-function fakeSession(req, res, next) {
-  req.user = {
-    _id: require('minq').ObjectId().toString(),
-    username: 'jden',
-    bio: 'real life awesome dude',
-    faves: [],
-    friends: []
-  }
-  next()
-}
 
 function logReq(req, res, next) {
   console.log(Date.now(), req.path, req.query, req.method, req.user && req.user.name)
