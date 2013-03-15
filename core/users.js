@@ -95,10 +95,10 @@ exports.login = function (req, res) {
 
         } else {
           // user does not exist
-          register(username, hashedPassword).then(function () {
-            return makeSession(req, res, username)
+          register(username, hashedPassword).then(function (user) {
+            return makeSession(req, res, user.name)
           }).then(function () {
-            res.send(201)
+            res.send(201, makeUserResp(user))
           }, function (e) {
             console.log(e)
             res.send(500)
@@ -145,7 +145,7 @@ function register(username, hashedPassword) {
     }
   }
   return minq.from('users')
-    .insert(user)
+    .insert(user).then(function (){ return user })
 }
 
 // @returns Promise<String>
