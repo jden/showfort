@@ -86,13 +86,13 @@ nav.search{
 .list li > a:not([class*="button"]) {
   margin-right: -100px;
 }
-.show{
+.show, .showdetail{
   border-left-width: 10px;
   border-left-style: solid;
 }
-/*.show:hover{
-  background-color: #f8f8f8;
-}*/
+.showdetail{
+  padding: 0 60px 10px 10px;
+}
 .show a{
   font-size: 110%;
 }
@@ -195,12 +195,61 @@ nav.search{
 .detail{
 border: 1px solid #ccc;
 padding: 10px;
-margin: 10px -90px 0 0;
+margin: 10px 0 0;
 border-radius: 3px;
 }
 .venue .info {
   color: #888;
 }
+.venue cite{
+  padding-left: 3px;
+  border-left: 17.5px solid #000;
+  font-style: normal;
+}
+
+.v1 cite{
+  border-color: #90CA77; 
+}
+.v2 cite{
+  border-color: #81C6DD; 
+}
+.v3 cite{
+  border-color: #E9B64D; 
+}
+.v4 cite{
+  border-color: #C23E06; 
+}
+.v5 cite{
+  border-color: #9E3B33; 
+}
+.v6 cite{
+  border-color: #CF65DB; 
+}
+.v7 cite{
+  border-color: #6B7FF2; 
+}
+.v8 cite{
+  border-color: #E3F073; 
+}
+.v9 cite{
+  border-color: #BA7D3F; 
+}
+.v10 cite{
+  border-color: #FF87CF; 
+}
+.v11 cite{
+  border-color: #77E6CF; 
+}
+.v12 cite{
+  border-color: #F07380; 
+}
+.v13 cite{
+  border-color: #E48743; 
+}
+.v14 cite{
+  border-color: #f60;
+}
+
 .showinfo .hashtag{
   margin-left: 30px;
 }

@@ -55,6 +55,7 @@ var collapsedAt
 
 
 function expand() {
+  if (expanded == this.id) { return collapse()}
   if (collapsed === this.id && (new Date - collapsedAt) < 200) {
     return
   }
@@ -64,17 +65,19 @@ function expand() {
 //debugger;
 
   var $d = $('#detail')
-    .css({top: $show.offset().top - 1})
+    .css({top: $show.offset().top + 49})
     .addClass('expanded')
   
   var $clone = $show.clone() 
-  $d.append($clone)
+  
 
   shows.byId(this.id).then(function (show) {
     var venue = venues[show.venue]
+
     var details = tShowDetails(show, venue)
-    $clone.append(details)
-    lazyLoadFaves(show, $clone)
+    $d.html(details)
+    //$clone.append(details)
+    lazyLoadFaves(show, $d)
     //lazyLoadComments(show, $show)
   }).done()
     
