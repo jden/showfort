@@ -13,7 +13,7 @@ var userSessionProjection = {
 }
 
 exports.userify = function (req, res, next) {
-  console.log('s', req.cookies, req)
+  //console.log('s', req.cookies, req)
   if (req.cookies && req.cookies.get('showfortid')) {
     console.log('\tgetting session', req.cookies.get('showfortid'))
     minq.from('users')
@@ -38,10 +38,25 @@ exports.userify = function (req, res, next) {
   }
 }
 
+module.exports.setCookies = function (req, res, username, sid) {
+  // yay security!
+    minq.from('users')
+      .where({sid: sid, name: username })
+      .one()
+      .then(function (user) {
+        if (user) {
+          res.cookies.set('showfortid', sid, { expires: new Date(Date.now() + 30*24*60*60*1000), httpOnly: true, overwrite: true, secure: false });
+          res.send('Close this tab to continue')
+        } else {
+          res.send(403)
+        }
+      })
+}
+
 function makeSession(req, res, username) {
   try {
     var sid = minq.ObjectId().toString()
-    res.cookies.set('showfortid', sid, { expires: new Date(Date.now() + 30*24*60*60*1000), httpOnly: true, overwrite: true });
+    res.cookies.set('showfortid', sid, { expires: new Date(Date.now() + 30*24*60*60*1000), httpOnly: true, overwrite: true, secure: false });
     console.log('made session', sid)
   } catch (e) {
     console.log('could not make session for ', username, e, e.stack)

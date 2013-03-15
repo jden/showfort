@@ -44,6 +44,9 @@ wham('me', '/me')
 wham('login or register', '/login') //like a boss
   .post(users.login)
 
+wham('sessionify', '/session')
+  .get(users.setCookie, 'req.query.r','req.query.n')
+
 
 function logReq(req, res, next) {
   console.log(Date.now(), req.path, req.query, req.method, req.user && req.user.name)

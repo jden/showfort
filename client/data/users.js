@@ -107,6 +107,7 @@ function register(action) {
       }
     }
 
+    //var url = (/fort/.test(window.location.href)) ? 'https://showfort.jitsu.com/'
     function sendRegistration(user, pass) {
       return http.post({url: '/login', data: {user: user, pass: pass }}).then(function (rUser) {
         _user = rUser
