@@ -11,6 +11,7 @@ $(function () {
 $('#shows').on('vclick', '.listing', toggle)
 $('#detail').on('vclick', collapse)
 $(document).on('scrollStart', collapse)
+$(document).on('updateList', collapse)
 // $('#shows').on('vclick', '.button.hashtag', function () {
 //   var tag = $(this).text()
 //   tag = tag.substr(tag.indexOf('#')+1)
