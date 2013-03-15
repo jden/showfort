@@ -76,5 +76,11 @@
     "_id": "v1",
     "at": "6th & Main",
     "age": "21+"
+  },
+  {
+    "venue": "Centennial Amphiteatre (free show)",
+    "_id": "v14",
+    "at": "Boise State & Greenbelt",
+    "age": "All ages"
   }
 ]
