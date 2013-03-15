@@ -43,7 +43,7 @@ function makeSession(req, res, username) {
 
   return minq.from('users')
     .where({name: username})
-    .update({$set: {sid: sid}})
+    .update({$addToSet: {sid: sid}})
 }
 
 function makeUserResp(user) {
