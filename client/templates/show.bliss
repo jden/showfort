@@ -1,9 +1,0 @@
-@!(show)
-
-<li class="@show.venue show @if (show.fave) { faved }" id="@show._id">
-  <a class="listing" href="#">@show.name
-    <span class="listfave icon-star"></span>
-    <span class="chevron"></span>
-    <span class="count">@show.score</span>
-  </a>
-</li>

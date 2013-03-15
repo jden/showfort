@@ -1,9 +1,0 @@
-@!(faves)
-
-@if (faves.length) {
-  @faves.map(function (fave, i) {
-    <a class="user">@fave</a>
-  })
-} else {
-  no faves yet!
-}
