@@ -38,7 +38,7 @@ exports.userify = function (req, res, next) {
   }
 }
 
-module.exports.setCookies = function (req, res, username, sid) {
+module.exports.setCookie = function (req, res, username, sid) {
   // yay security!
     minq.from('users')
       .where({sid: sid, name: username })
