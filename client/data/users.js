@@ -74,8 +74,8 @@ function register(action) {
   $('#register-user').focus()
 
   return Q.promise(function (resolve, reject) {
-    $('#signup .button-main').on('click', function (e) { e.preventDefault(); checkRegistrationForm() })
-    $('#signup-cancel').on('click', function (e) { e.preventDefault(); close() })
+    $('#signup .button-main').on('vclick', function (e) { e.preventDefault(); checkRegistrationForm() })
+    $('#signup-cancel').on('vclick', function (e) { e.preventDefault(); close() })
     $('#register-pass').on('keyup', function (e) {
       if (e.keyCode === 13) {
         checkRegistrationForm()

@@ -1,5 +1,5 @@
 $(function () {
-  $('header h1, #about').on('click', toggle)
+  $('header h1, #about').on('vclick', toggle)
 })
 
 function toggle() {

@@ -8,12 +8,12 @@ var $searchBar
 var $search
 var searching = false
 $(function () {
-  $('#search-btn').on('click', toggle)
+  $('#search-btn').on('vclick', toggle)
   $searchBar = $('nav.search')
   $search = $('#search')
   $search.on('keyup', update)
-  $('#search-clear').on('click', clearSearch)
-  $('#favetoggle').on('click', toggleFaveFilter)
+  $('#search-clear').on('vclick', clearSearch)
+  $('#favetoggle').on('vclick', toggleFaveFilter)
 })
 
 var faveFilter = false

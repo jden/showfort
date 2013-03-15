@@ -1,3 +1,4 @@
+require('./vmouse')
 var tGroup = require('./templates/group.bliss')
 var tShow = require('./templates/show.bliss')
 var _ = require('lodash')
@@ -32,13 +33,13 @@ function render() {
 
     })
 
-    $('#shows').append(html) 
+    $('#shows').empty().append(html) 
   })
 
-  $('#notice').on('click', function () {
+  $('#notice').on('vclick', function () {
     $('#notice').hide()
   })
-  $('#notice').on('click', '.login-btn', function () {
+  $('#notice').on('vclick', '.login-btn', function () {
     users.authenticated(false, function () {
       // 
     })

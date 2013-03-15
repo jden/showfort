@@ -90,6 +90,9 @@ nav.search{
   border-left-width: 10px;
   border-left-style: solid;
 }
+/*.show:hover{
+  background-color: #f8f8f8;
+}*/
 .show a{
   font-size: 110%;
 }
@@ -146,6 +149,34 @@ nav.search{
 }
 .v14{
   border-left-color: #f60;
+}
+.content{
+  -webkit-transform: translateZ(0);
+}
+@-webkit-keyframes flash{
+  0% {
+    /*background-color: #aaa;*/
+    min-height: 0;
+  }
+}
+
+#detail{
+  display: none;
+  position: absolute;
+  z-index: 5000;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 8px 15px -8px #222
+}
+
+#detail.expanded{
+  display: block;
+}
+#detail.expanded > *{
+  min-height: 135px;
+  -webkit-animation-name: flash;
+  -webkit-animation-duration: .2s;
+  -webkit-animation-timing-function: ease-out;
 }
 
 .expanded .chevron:before{

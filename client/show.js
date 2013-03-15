@@ -5,22 +5,21 @@ var tComments = require('./templates/comments.bliss')
 var comments = require('./data/comments')
 var tFaves = require('./templates/faves.bliss')
 var faves = require('./faves')
-//require('./vclick')
-var ev = ('ontouchend' in window) ? 'touchend' : 'click' 
 
 $(function () {
 
-$('#shows').on(ev, '.listing', toggle)
-
-// $('#shows').on(ev, '.button.hashtag', function () {
+$('#shows').on('vclick', '.listing', toggle)
+$('#detail').on('vclick', collapse)
+$(document).on('scrollStart', collapse)
+// $('#shows').on('vclick', '.button.hashtag', function () {
 //   var tag = $(this).text()
 //   tag = tag.substr(tag.indexOf('#')+1)
 //   console.log('ht', tag)
 //   document.location.href = 'https://twitter.com/intent/tweet?&hashtags='+tag
 // })
 
-$('#shows').on(ev, '.button.comment', addComment)
-$('#shows').on(ev, '.button.fave', fave)
+$('#detail').on('vclick', '.button.comment', addComment)
+$('#detail').on('vclick', '.button.fave', fave)
 
 })
 
@@ -37,25 +36,60 @@ function toggle(e) {
 }
 
 var expanded
+var collapsed
+var collapsedAt
+
+// function expand() {
+//   if (expanded) { collapse.call(expanded) }
+//   var $show = $(this).addClass('expanded')
+//   expanded = $show
+//   shows.byId(this.id).then(function (show) {
+//     var venue = venues[show.venue]
+//     //var details = tShowDetails(show, venue)
+//     //$show.append(details)
+//     //lazyLoadFaves(show, $show)
+//     //lazyLoadComments(show, $show)
+//   }).done()
+// }
+
 
 function expand() {
-  if (expanded) { collapse.call(expanded) }
-  console.log('expanding')
-  var $show = $(this).addClass('expanded')
-  expanded = $show
+  if (collapsed === this.id && (new Date - collapsedAt) < 200) {
+    return
+  }
+  if (expanded) { collapse() }
+  var $show = $(this)
+
+//debugger;
+
+  var $d = $('#detail')
+    .css({top: $show.offset().top - 1})
+    .addClass('expanded')
+  
+  var $clone = $show.clone() 
+  $d.append($clone)
+
   shows.byId(this.id).then(function (show) {
     var venue = venues[show.venue]
     var details = tShowDetails(show, venue)
-    $show.append(details)
-    lazyLoadFaves(show, $show)
+    $clone.append(details)
+    lazyLoadFaves(show, $clone)
     //lazyLoadComments(show, $show)
   }).done()
+    
+    expanded = this.id
 }
 
+
 function collapse() {
-  console.log('collapsing', this)
-  $('.detail, .showinfo', this).remove()
-  $(this).removeClass('expanded')
+  if (!expanded) { return }
+  console.log('collapsing')
+  $('#detail')
+    .empty()
+    .removeClass('expanded')
+  collapsed = expanded
+  collapsedAt = +new Date
+  expanded = false 
 }
 
 function addComment() {
@@ -80,7 +114,9 @@ function lazyLoadFaves(show, $show) {
   })
 }
 
-function fave(){
+function fave(e){
+  e.preventDefault()
+  e.stopPropagation()
   var $show = $(this).closest('.show')
   var $count = $show.find('.count')
   var id = $show[0].id
