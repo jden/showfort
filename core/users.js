@@ -13,6 +13,7 @@ var userSessionProjection = {
 }
 
 exports.userify = function (req, res, next) {
+  console.log('s', req.cookies, req)
   if (req.cookies && req.cookies.get('showfortid')) {
     console.log('\tgetting session', req.cookies.get('showfortid'))
     minq.from('users')

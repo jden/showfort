@@ -6,6 +6,7 @@ var watch = require('watch')
 var UglifyJS = require('uglify-js')
 
 var debug = process.env.NODE_ENV !== 'production'
+debug = true
 var bundle = ''
 
 

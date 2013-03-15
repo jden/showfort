@@ -71,17 +71,16 @@ function register(action) {
     $('#continuationMsg').text('')
   }
   $('#signup').show()
-  _.defer(function () { $('#register-user').focus() })
+  $('#register-user').focus()
+
 
   return Q.promise(function (resolve, reject) {
     $('#signup .button-main').on('vclick', function (e) { e.preventDefault(); checkRegistrationForm() })
     $('#signup-cancel').on('vclick', function (e) { e.preventDefault(); close() })
     $('#register-pass').on('keyup', function (e) {
-      if (e.keyCode === 13) {
-        checkRegistrationForm()
-      }
-    })
-
+      if (e.keyCode === 13) { checkRegistrationForm() }
+    }) 
+    
     function checkRegistrationForm() {
       var $msg = $('#continuationMsg')
       var user = $('#register-user').val()
@@ -90,8 +89,7 @@ function register(action) {
       if(/^[a-zA-Z0-9]+$/.test(user) && pass.length > 4) {
         sendRegistration(user, pass).then(function () {
           $('#signup h2').html('You\'re all set.<br/>Tell all yr friends.').delay(750).fadeOut(function () {
-            cleanup()
-            $('#signup').remove()
+            $('#signup').hide()
             resolve()
           })
           $('#signup .input-group, #signup-cancel, #continuationMsg, .button-main').hide()
@@ -118,15 +116,11 @@ function register(action) {
 
     function close() {
       $('#signup').hide();
-      cleanup()
+      $('#register-pass').off()
+      $('#signup .button-main').off()
+      $('#signup-cancel').off()
       reject(new Error('Not authenticated'))
     }
 
   })
-}
-
-function cleanup() {
-  $('#register-pass').off()
-  $('#signup .button-main').off()
-  $('#signup-cancel').off()
 }
