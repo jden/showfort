@@ -71,7 +71,7 @@ function register(action) {
     $('#continuationMsg').text('')
   }
   $('#signup').show()
-  $('#register-user').focus()
+  _.defer(function () { $('#register-user').focus() })
 
   return Q.promise(function (resolve, reject) {
     $('#signup .button-main').on('vclick', function (e) { e.preventDefault(); checkRegistrationForm() })

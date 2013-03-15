@@ -19,6 +19,11 @@ exports.userify = function (req, res, next) {
       .where({sid: req.cookies.get('showfortid') })
       .one()
       .then(function (user) {
+        if (!user) {
+          req.cookies.set('showfortid')
+          console.log('invalid session id')
+          return next()
+        }
         req.user = user
         console.log('\t\tsession:', user.name)
         next()

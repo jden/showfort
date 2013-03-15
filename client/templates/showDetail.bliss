@@ -3,7 +3,7 @@
   var href = 'https://twitter.com/intent/tweet?&hashtags=' + show.hashtag;
   if (show.tw) { href+='&text=@'+show.tw }
 }
-<div class="@show.venue showdetail @if (show.fave) { faved }">
+<div class="@show.venue showdetail @if (show.fave) { faved }" data-id="@show._id">
   <div class="showinfo">
     <span class="venue @venue._id">At <cite>@venue.venue</cite> <span class="info">(@venue.at) @venue.age</span></span>
   </div>

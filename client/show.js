@@ -121,21 +121,26 @@ function lazyLoadFaves(show, $show) {
 function fave(e){
   e.preventDefault()
   e.stopPropagation()
-  var $show = $(this).closest('.show')
+  var $detail = $(this).closest('.showdetail')
+  var id = $detail.attr('data-id')
+  var $show = $('#' + id)
   var $count = $show.find('.count')
-  var id = $show[0].id
   if ($show.hasClass('faved')) {
     $show.removeClass('faved')
+    $detail.removeClass('faved')
     increment($count, -1)
     faves.unfave('show', id).then(null, function () {
       $show.addClass('faved')
+      $detail.addClass('faved')
       increment($count, 1)
     })
   } else {
     $show.addClass('faved')
+    $detail.addClass('faved')
     increment($count, 1)
     faves.fave('show', id).then(null, function () {
       $show.removeClass('faved')
+      $detail.removeClass('faved')
       increment($count, -1)
     })
   }

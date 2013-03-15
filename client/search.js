@@ -104,7 +104,9 @@ function clearCache(){
 }
 
 function update() {
-  $(document).trigger('updateList')
+  try {
+    $(document).trigger('updateList')
+  } catch (e) {}
   var headers = {}
   var search = $search.val()
   var s = like(search)
