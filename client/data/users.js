@@ -71,9 +71,16 @@ function register(action) {
     $('#continuationMsg').text('')
   }
   $('#signup').show()
+  $('#register-user').focus()
+
   return Q.promise(function (resolve, reject) {
     $('#signup .button-main').on('click', function (e) { e.preventDefault(); checkRegistrationForm() })
     $('#signup-cancel').on('click', function (e) { e.preventDefault(); close() })
+    $('#register-pass').on('keyup', function (e) {
+      if (e.keyCode === 13) {
+        checkRegistrationForm()
+      }
+    })
 
     function checkRegistrationForm() {
       var $msg = $('#continuationMsg')
@@ -119,6 +126,7 @@ function register(action) {
 }
 
 function cleanup() {
+  $('#register-pass').off()
   $('#signup .button-main').off()
   $('#signup-cancel').off()
 }
