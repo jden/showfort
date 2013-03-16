@@ -324,7 +324,7 @@ color: #fff;
   border: 0;
   padding: 3px 0 5px;
 }
-#detail .comments .user{
+#detail .comments .user, #commentsList .comments .user{
   margin: 0;
   display: inline;
 }
@@ -432,6 +432,9 @@ color: #fff;
   right: 0;
   height: 50px;
   overflow: hidden;
+}
+#commentsList .list{
+  margin: 10px;
 }
 #commentsList.on{
   display: block;

@@ -104,15 +104,12 @@ function addComment() {
   }).done()
 }
 
-function lazyLoadComments(show, $show) {
-  shows.commentsById(show._id).then(function (comments){
-    var comments = tComments(comments)
-    $show.find('.comments').empty().append(comments)
-  })
-}
+
 
 function lazyLoadDetails(show, $show) {
   shows.detailsById(show._id).then(function (details){
+    show.faves = details.faves
+    show.comments = details.comments
     console.log('faves!', details)
     var faves = tFaves(details.faves)
     var comments = tCommentsPreview(details.comments)

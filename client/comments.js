@@ -1,8 +1,11 @@
 var http = require('./http')
+var tComments = require('./templates/comments.bliss')
 var $barTitle
 var $commentsList
 var prevTitle
 var _show
+var commentsModel = []
+var shows = require('./data/shows')
 
 $(function () {
   $commentsList = $('#commentsList')
@@ -12,11 +15,15 @@ $(function () {
 
 function show(show, focus) {
   _show = show
+  commentsModel = [].concat(show.comments)
   console.log(show)
   $commentsList.toggleClass('on off')
   prevTitle = $barTitle.text()
   $barTitle.text(show.name)
   $('#bar').addClass('sub')
+
+  render()
+  lazyLoadComments()
 
   if (focus) {
     $('#addCommentInput').focus()
@@ -37,10 +44,24 @@ function submit(e) {
   if (!text) { return }
   var post = http.post({url: '/shows/'+_show._id+'/comments', data: {text: text}})
 
-
+  commentsModel.push({user: user.name, text: text})
+  render()
 
   //post.then()
 
+}
+
+function lazyLoadComments() {
+  shows.commentsById(_show._id).then(function (comments){
+    commentsModel = comments
+    render()
+  })
+}
+
+function render() {
+  $('#addCommentInput').val('')
+  var html = tComments(commentsModel)
+  $commentsList.find('.list').html(html)
 }
 
 module.exports.show = show
