@@ -30,6 +30,7 @@ wham('shows list', '/shows')
 
 wham('show comments', '/shows/:id/comments')
   .get(shows.getCommentsById, 'req.params.id')
+  .post(shows.postComment, 'req.params.id', 'req.body.text','req.user')
 
 wham('show details', '/shows/:id/details')
   .get(shows.getDetailsById, 'req.params.id')

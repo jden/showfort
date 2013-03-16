@@ -79,6 +79,27 @@ exports.getCommentsById = function (showId) {
       return show.comments
     })
 }
+minq.verbose = true
+exports.postComment = function (showId, commentText, user) {
+  if (!commentText || !user.name) {
+    var err = new Error()
+    err.code = 400
+    throw err
+  }
+  commentText = commentText.substr(0,140)
+  return minq
+    .from('shows')
+    .byId(showId)
+    .update({
+      $push: {
+        comments: {
+          user: user.name,
+          timestamp: Date.now(),
+          text: commentText
+        }
+      }
+    })
+}
 
 exports.getFavesById = function (showId) {
   return minq

@@ -324,6 +324,10 @@ color: #fff;
   border: 0;
   padding: 3px 0 5px;
 }
+#detail .comments .user{
+  margin: 0;
+  display: inline;
+}
 .comments .user, .comments .hashtag{
   font-weight: bold;
   color: #109adc;
