@@ -2,6 +2,7 @@ var Q = require('q')
 var EE = require('events').EventEmitter
 var events = new EE()
 var IndexedArray = require('indexed-array')
+var http = require('../http')
 
 var loaded = false
 var shows
@@ -47,7 +48,11 @@ function commentsById(id) {
 }
 
 module.exports.favesById = function (id) {
-  return Q($.ajax('/shows/'+id+'/faves'))
+  return http.get('/shows/'+id+'/faves')
+}
+
+module.exports.detailsById = function (id) {
+  return http.get('/shows/'+id+'/details')
 }
 
 function sync(){

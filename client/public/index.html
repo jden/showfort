@@ -29,11 +29,13 @@
   </head>
   <body>
 
-  <header class="bar-title">
+  <header id="bar" class="bar-title">
+    <a id="back" class="button-prev" href="#">list</a>
      <a id="favetoggle" class="button off" href="#"><span class="icon-star"></span></a>
-    <h1 class="title">showfort</h1>
+    <h1 id="barTitle" class="title">showfort</h1>
     <a id="search-btn" class="button icon-search" href="#search"></a>
   </header>
+
   <nav class="search">
     <input id="search" type="search" placeholder="band">
     <a id="search-clear" class="icon-remove-circle"></a>
@@ -74,6 +76,17 @@
     </form>
     <a id="signup-cancel" href="#">nevermind, I don't want to sign up now</a>
   </div>
+</div>
+
+<div class="content off" id="commentsList">
+<ul class="list">
+</ul>
+<div class="addCommentBar">
+  <form>
+    <input type="text" placeholder="add comment" id="addCommentInput"/>
+    <div id="addComment"><input type="submit" value="post" class="button-positive"></div>
+  </form>
+</div>
 </div>
 
 <div id="detail" class="list"></div>

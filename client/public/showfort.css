@@ -11,6 +11,13 @@ header .button .icon-star, header .button.icon-search{
   font-size: 18px;
 }
 
+#back{
+  display: none;
+}
+header.sub #back{
+  display: inline-block;
+}
+
 #favetoggle.off{
   border-left-width: 1px;
   border-right-width: 25px;
@@ -19,9 +26,16 @@ header .button .icon-star, header .button.icon-search{
   border-right-width: 1px;
   border-left-width: 25px;
 }
+header.sub #favetoggle{
+  display: none;
+}
 
 #favetoggle.on .icon-star:before  { content: "\f005"; }
 #favetoggle.off .icon-star:before { content: "\f006"; }
+
+header.sub #search-btn{
+  display: none;
+}
 
 #notice{
   width: 100%;
@@ -282,7 +296,7 @@ color: #fff;
 }
 
 .detail .faves {
-  margin: 5px 0;
+  margin: 7px 0;
 }
 .detail .faves a:after{
   content: ',';
@@ -403,3 +417,44 @@ color: #fff;
   background-image: linear-gradient(to bottom, #1eb0e9 0, #109adc 100%);
 }
 
+#commentsList{
+  /*display: none;*/
+}
+.addCommentBar{
+  background-color: #aaa;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  overflow: hidden;
+}
+#commentsList.on{
+  display: block;
+  left: 0;
+  -webkit-transition: all .2s ease-out;
+}
+#commentsList.off{
+  left: 100%;
+  -webkit-transition: all .2s ease-in;
+}
+
+#commentsList form{
+  display: table;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+#addCommentInput{
+  display: table-cell;
+}
+#addComment{
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 5px;
+  width: 100px;
+}
+#addComment input{
+  width:100%;
+  height: 100%;
+}

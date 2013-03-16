@@ -1,8 +1,8 @@
 var shows = require('./data/shows')
 var venues = require('./data/venues')
 var tShowDetails = require('./templates/showDetail.bliss')
-var tComments = require('./templates/comments.bliss')
-var comments = require('./data/comments')
+var tCommentsPreview = require('./templates/comments.bliss')
+var comments = require('./comments')
 var tFaves = require('./templates/faves.bliss')
 var faves = require('./faves')
 
@@ -77,7 +77,7 @@ function expand() {
     var details = tShowDetails(show, venue)
     $d.html(details)
     //$clone.append(details)
-    lazyLoadFaves(show, $d)
+    lazyLoadDetails(show, $d)
     //lazyLoadComments(show, $show)
   }).done()
     
@@ -97,9 +97,11 @@ function collapse() {
 }
 
 function addComment() {
-  console.log($(this))
-  var $show = $(this).closest('.show')
-  comments.postComment('shows', $listing[0].id) 
+  var $detail = $(this).closest('.showdetail')
+  var id = $detail.attr('data-id')
+  shows.byId(id).then(function (show) {
+   comments.show(show, true)
+  }).done()
 }
 
 function lazyLoadComments(show, $show) {
@@ -109,12 +111,14 @@ function lazyLoadComments(show, $show) {
   })
 }
 
-function lazyLoadFaves(show, $show) {
-  shows.favesById(show._id).then(function (faves){
-    console.log('faves!', faves)
-    var faves = tFaves(faves)
+function lazyLoadDetails(show, $show) {
+  shows.detailsById(show._id).then(function (details){
+    console.log('faves!', details)
+    var faves = tFaves(details.faves)
+    var comments = tCommentsPreview(details.comments)
     console.log('faves', faves)
     $show.find('.faves').empty().append(faves)
+    $show.find('.comments').empty().append(comments)
   })
 }
 

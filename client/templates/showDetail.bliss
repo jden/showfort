@@ -10,10 +10,10 @@
   <div class="detail">
     <div class="showctl">
       <a class="button hashtag" href="@href" target="_blank"><span class="icon-twitter"></span>#@show.hashtag</a>
-      <!--<a class="button comment"><span class="icon-comment"></span> add</a>-->
+      <a class="button comment"><span class="icon-comment"></span> comment</a>
       <a class="button fave"><span class="icon-star"></span> fave</a>
     </div>
     <ul class="faves">loading...</ul>
-    <!--<ul class="comments"><li>loading...</li></ul>-->
+    <ul class="comments"><li>loading...</li></ul>
   </div>
 </div>

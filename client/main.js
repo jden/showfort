@@ -10,9 +10,16 @@ var shows = require('./data/shows')
 var users = require('./data/users')
 
 
-$(render)
+$(function () {
+  render()
+  $('#back').on('vclick', function (e) {
+    e.preventDefault()
+    $(document).trigger('back')
+  })
+})
 
 function render() {
+
   shows.all().then(function (shows) {
 
   window.shows = shows

@@ -90,6 +90,22 @@ exports.getFavesById = function (showId) {
     })
 }
 
+exports.getDetailsById = function (showId) {
+  var comments = exports.getCommentsById(showId).then(function (comments) {
+    return comments.length > 5 ? comments.slice(comments.length-5) : comments
+  })
+  var faves = exports.getFavesById(showId)
+
+  return Q.all([
+    comments, faves
+    ]).then(function (details) {
+      return {
+        comments: details[0],
+        faves: details[1]
+      }
+    })
+}
+
 exports.addComment = function (username, showId, text) {
   var comment = {user: username, text: text, mentioned:[], hashtags:[]}
   return minq

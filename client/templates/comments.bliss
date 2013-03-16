@@ -10,5 +10,5 @@
   </li>
 })
 }else {
-  <li>no comments yet! <strong>add</strong> yours above.</li>
+  <li>no comments yet!</li>
 }
