@@ -50,17 +50,20 @@ function meSync(){
 function authenticated(action, fn) {
   return me().then(function (user) {
     if (!user) {
-      return register(action).then(function () {
-        $('#notice-msg').text('Welcome, ' + _user.name + '!')
-        $('#notice').show()
-        if (_user.faves.shows.length) {
-          window.location.reload()
+      return register(action).then(function (user) {
+        var msg = 'Welcome, ' + user.name + '!'
+        var weGotUserStateThatWeNeedToRerender = user.faves.shows.length > 1
+        if (weGotUserStateThatWeNeedToRerender) {
+          msg += ' Reload the app to restore your faved shows.'
         }
-        return fn.call(user)
+        $('#notice-msg').text(msg)
+        $('#notice').show()
+
+        return fn.call(user, user)
       })
     }
 
-    return fn.call(user)
+    return fn.call(user, user)
   })  
 }
 
@@ -87,6 +90,8 @@ function register(action) {
       var pass = $('#register-pass').val()
 
       if(/^[a-zA-Z0-9]+$/.test(user) && pass.length > 4) {
+        $('#signup .button-main').text('sending...')
+        $('#register-pass, #register-user').blur()
         sendRegistration(user, pass).then(function () {
           $('#signup h2').html('You\'re all set.<br/>Tell all yr friends.').delay(750).fadeOut(function () {
             $('#signup').hide()
@@ -111,7 +116,7 @@ function register(action) {
     function sendRegistration(user, pass) {
       return http.post({url: '/login', data: {user: user, pass: pass }}).then(function (rUser) {
         _user = rUser
-        user = Q.resolve(rUser)
+        user = resolve(rUser)
       })
     }
 

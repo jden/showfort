@@ -58,14 +58,13 @@ function makeSession(req, res, username) {
     var sid = minq.ObjectId().toString()
     res.cookies.set('showfortid', sid, { expires: new Date(Date.now() + 30*24*60*60*1000), httpOnly: true, overwrite: true, secure: false });
     console.log('made session', sid)
+    return minq.from('users')
+      .where({name: username})
+      .update({$addToSet: {sid: sid}})
   } catch (e) {
     console.log('could not make session for ', username, e, e.stack)
     return Q.reject(e)
   }
-
-  return minq.from('users')
-    .where({name: username})
-    .update({$addToSet: {sid: sid}})
 }
 
 function makeUserResp(user) {
@@ -118,10 +117,11 @@ exports.login = function (req, res) {
         } else {
           // user does not exist
           register(username, hashedPassword).then(function (user) {
-            return makeSession(req, res, user.name)
-          }).then(function () {
-            res.send(201, makeUserResp(user))
-          }, function (e) {
+            return makeSession(req, res, user.name).then(function () {
+              console.log('hey', user)
+              res.send(201, makeUserResp(user))
+            })
+          }).then(null, function (e) {
             console.log(e)
             res.send(500)
           })

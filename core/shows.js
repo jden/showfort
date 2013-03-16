@@ -79,7 +79,7 @@ exports.getCommentsById = function (showId) {
       return show.comments
     })
 }
-minq.verbose = true
+
 exports.postComment = function (showId, commentText, user) {
   if (!commentText || !user.name) {
     var err = new Error()
@@ -113,7 +113,12 @@ exports.getFavesById = function (showId) {
 
 exports.getDetailsById = function (showId) {
   var comments = exports.getCommentsById(showId).then(function (comments) {
-    return comments.length > 5 ? comments.slice(comments.length-5) : comments
+    var extra = 0
+    if (comments.length > 5) {
+      extra = comments.length - 5;
+      comments = comments.slice(extra)
+    }
+    return [comments, extra]
   })
   var faves = exports.getFavesById(showId)
 
@@ -121,7 +126,9 @@ exports.getDetailsById = function (showId) {
     comments, faves
     ]).then(function (details) {
       return {
-        comments: details[0],
+        comments: details[0][0],
+        extra: details[0][1],
+        total: details[0][0].length + details[0][1],
         faves: details[1]
       }
     })

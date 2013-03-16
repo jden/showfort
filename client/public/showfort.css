@@ -190,7 +190,11 @@ nav.search{
   -webkit-animation-duration: .2s;
   -webkit-animation-timing-function: ease-out;
 }
-
+#detail .extra {
+  font-weight: bold;
+  color: #aaa;
+  padding: 2px;
+}
 .expanded .chevron:before{
   top: 9px;
   right: -1px;
@@ -422,9 +426,9 @@ color: #fff;
 }
 
 #commentsList{
-  /*display: none;*/
+  bottom: 50px;
 }
-.addCommentBar{
+#addCommentBar{
   background-color: #aaa;
   position: fixed;
   bottom: 0;
@@ -432,9 +436,13 @@ color: #fff;
   right: 0;
   height: 50px;
   overflow: hidden;
+  display: none;
+}
+#addCommentBar.on{
+  display: block;
 }
 #commentsList .list{
-  margin: 10px;
+  margin: 10px 10px 10px 60px;
 }
 #commentsList.on{
   display: block;
@@ -446,7 +454,7 @@ color: #fff;
   -webkit-transition: all .2s ease-in;
 }
 
-#commentsList form{
+#addCommentBar form{
   display: table;
   width: 100%;
   padding: 5px;

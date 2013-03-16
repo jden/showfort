@@ -20,7 +20,8 @@ $(document).on('updateList', collapse)
 // })
 
 $('#detail').on('vclick', '.button.comment', addComment)
-$('#detail').on('vclick', '.button.fave', fave)
+            .on('vclick', '.button.fave', fave)
+            .on('vclick', '.comments', showComments)
 
 })
 
@@ -97,13 +98,22 @@ function collapse() {
 }
 
 function addComment() {
+  collapse()
   var $detail = $(this).closest('.showdetail')
   var id = $detail.attr('data-id')
   shows.byId(id).then(function (show) {
-   comments.show(show, true)
+    comments.show(show, true)
   }).done()
 }
 
+function showComments() {
+  collapse()
+  var $detail = $(this).closest('.showdetail')
+  var id = $detail.attr('data-id')
+  shows.byId(id).then(function (show) {
+    comments.show(show)
+  }).done()  
+}
 
 
 function lazyLoadDetails(show, $show) {
@@ -112,7 +122,7 @@ function lazyLoadDetails(show, $show) {
     show.comments = details.comments
     console.log('faves!', details)
     var faves = tFaves(details.faves)
-    var comments = tCommentsPreview(details.comments)
+    var comments = tCommentsPreview(details.comments, details.total)
     console.log('faves', faves)
     $show.find('.faves').empty().append(faves)
     $show.find('.comments').empty().append(comments)

@@ -1,14 +1,18 @@
-@!(comments)
+@!(comments, total)
 @{
   var parse = function (text) { return text }
 }
 
 @if (comments.length) {
-@comments.map(function (comment) {
-  <li>
-    <a class="user">@comment.user</a>: @parse(comment.text)
-  </li>
-})
-}else {
+  @if (total != comments.length) {
+    <li class="extra">View all @total comments</li>
+  }
+
+  @comments.map(function (comment) {
+    <li>
+      <a class="user">@comment.user</a>: @parse(comment.text)
+    </li>
+  })
+} else {
   <li>no comments yet!</li>
 }

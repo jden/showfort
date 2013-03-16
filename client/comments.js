@@ -5,12 +5,13 @@ var $commentsList
 var prevTitle
 var _show
 var commentsModel = []
+var users = require('./data/users')
 var shows = require('./data/shows')
 
 $(function () {
   $commentsList = $('#commentsList')
   $barTitle = $('#barTitle')
-  $commentsList.on('submit', 'form', submit)
+  $('#addCommentBar').on('submit', 'form', submit)
 })
 
 function show(show, focus) {
@@ -18,6 +19,7 @@ function show(show, focus) {
   commentsModel = [].concat(show.comments)
   console.log(show)
   $commentsList.toggleClass('on off')
+  $('#addCommentBar').addClass('on')
   prevTitle = $barTitle.text()
   $barTitle.text(show.name)
   $('#bar').addClass('sub')
@@ -35,6 +37,7 @@ function hide() {
   $barTitle.text(prevTitle)
   $('#bar').removeClass('sub')
   $commentsList.toggleClass('on off')
+  $('#addCommentBar').removeClass('on')
   $(document).off('back.comment')
 }
 
@@ -42,12 +45,13 @@ function submit(e) {
   e.preventDefault()
   var text = $('#addCommentInput').val()
   if (!text) { return }
-  var post = http.post({url: '/shows/'+_show._id+'/comments', data: {text: text}})
-
-  commentsModel.push({user: user.name, text: text})
-  render()
-
-  //post.then()
+    $('#addCommentInput').blur()
+  users.authenticated('posting a comment about ' + _show.name,
+    function (user) {
+      var post = http.post({url: '/shows/'+_show._id+'/comments', data: {text: text}})
+      commentsModel.push({user: user.name, text: text})
+      render()
+    })
 
 }
 
