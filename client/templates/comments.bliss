@@ -4,7 +4,7 @@
 }
 
 @if (comments.length) {
-  @if (total != comments.length) {
+  @if (total && total != comments.length) {
     <li class="extra">View all @total comments</li>
   }
 
