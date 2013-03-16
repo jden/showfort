@@ -63,8 +63,7 @@ function expand() {
   if (expanded) { collapse() }
   var $show = $(this)
 
-//debugger;
-
+  $show.addClass('expanded')
   var $d = $('#detail')
     .css({top: $show.offset().top + 49})
     .addClass('expanded')
@@ -88,7 +87,7 @@ function expand() {
 
 function collapse() {
   if (!expanded) { return }
-  console.log('collapsing')
+  $('#'+expanded).removeClass('expanded')
   $('#detail')
     .empty()
     .removeClass('expanded')
