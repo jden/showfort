@@ -1,16 +1,16 @@
 /* fonts */
 @font-face {
-  font-family: 'FontAwesome';
-  src: url('/?/font/fontawesome-webfont.eot?v=3.0.1');
-  src: url('/?/font/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
-    url('/?/font/fontawesome-webfont.woff?v=3.0.1') format('woff'),
-    url('/?/font/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+  font-family: 'fontello';
+  src: url('/?/font/fontello.eot');
+  src: url('/?/font/fontello.eot') format('embedded-opentype'),
+    url('/?/font/fontello.woff') format('woff'),
+    url('/?/font/fontello.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: FontAwesome;
+  font-family: fontello;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -76,21 +76,21 @@ ul.icons li [class^="icon-"],
 ul.icons li [class*=" icon-"] {
   width: .75em;
 }
-.icon-muted {
-  color: #eeeeee;
-}
-/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
-    readers do not read off random characters that represent icons */
-.icon-search:before               { content: "\f002"; }
 
-.icon-star:before                 { content: "\f005"; }
-.icon-star-empty:before           { content: "\f006"; }
-.icon-remove:before               { content: "\f00d"; }
-.icon-flag:before                 { content: "\f024"; }
-.icon-headphones:before           { content: "\f025"; }
-.icon-remove-circle:before        { content: "\f05c"; }
-.icon-comment:before              { content: "\f075"; }
-.icon-twitter-sign:before         { content: "\f081"; }
+.icon-star:before { content: '\2605'; }
+.icon-star-empty:before { content: '\2606'; }
+.icon-flag:before { content: '\2691'; }
+.icon-remove:before { content: '\2715'; }
+.icon-asterisk:before { content: '\2731'; }
+.icon-remove-circle:before { content: '\e703'; }
+.icon-comment:before { content: '\e718'; }
+.icon-twitter:before { content: '\f099'; }
+.icon-menu:before { content: '\f0c9'; }
+.icon-food:before { content: '\f0f5'; }
+.icon-headphones-1:before { content: '\e800'; }
+.icon-user:before { content: '\1f464'; }
+.icon-megaphone:before { content: '\1f4e3'; }
+.icon-search:before { content: '\1f50d'; }
 
 /* end fonts */
 
@@ -127,8 +127,8 @@ header.sub #favetoggle{
   display: none;
 }
 
-#favetoggle.on .icon-star:before  { content: "\f005"; }
-#favetoggle.off .icon-star:before { content: "\f006"; }
+#favetoggle.on .icon-star:before  { content: "\2605"; }
+#favetoggle.off .icon-star:before { content: "\2606"; }
 
 header.sub #search-btn{
   display: none;
@@ -406,9 +406,8 @@ color: #fff;
   content: '';
 }
 .detail .faves a:first-child:before{
-  font-family: ;
-  content: "\f005";
-  font-family: FontAwesome;
+  content: "\2605";
+  font-family: fontello;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
