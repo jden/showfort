@@ -144,6 +144,9 @@ header.sub #search-btn{
   padding: 10px 10px;
   line-height: 20px;
 }
+#notice.on{
+  display: block;
+}
 #notice #dismiss{
   position: absolute;
   right: 34px;

@@ -3,6 +3,7 @@ var EE = require('events').EventEmitter
 var events = new EE()
 var IndexedArray = require('indexed-array')
 var http = require('../http')
+var notice = require('../notice')
 
 var loaded = false
 var user
@@ -34,6 +35,10 @@ events.on('loaded', function (user) {
 })
 
 
+module.exports.getUser = function (username) {
+  return http.get('/users/' + username)
+}
+
 function me() {
   if (loaded) return user
   return Q.promise(function (resolve, reject) {
@@ -56,9 +61,7 @@ function authenticated(action, fn) {
         if (weGotUserStateThatWeNeedToRerender) {
           msg += ' Reload the app to restore your faved shows.'
         }
-        $('#notice-msg').text(msg)
-        $('#notice').show()
-
+        notice(msg)
         return fn.call(user, user)
       })
     }

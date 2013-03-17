@@ -44,6 +44,9 @@ wham('user fave', '/shows/:id/fave')
 wham('show faves', '/shows/:id/faves')
   .get(shows.getFavesById, 'req.params.id')
 
+wham('user', '/users/:username')
+  .get(users.getUser, 'req.params.username')
+
 wham('me', '/me')
   .get(users.me, 'req.user')
 

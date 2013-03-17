@@ -74,6 +74,22 @@ function makeUserResp(user) {
     name: user.name
   }
 }
+
+exports.getUser = function (username) {
+  return  minq.from('users')
+    .where({name: username})
+    .one()
+    .then(function (user) {
+      if (!user) { 
+        var err = new Error()
+        err.code = 404
+        throw err
+      }
+
+      return makeUserResp(user)
+    })
+}
+
 exports.me = function (user) {
   if (!user) {
     return Q.resolve()

@@ -3,10 +3,12 @@ var shows = require('./data/shows')
 var _ = require('lodash')
 var ev = ('ontouchend' in window) ? 'touchstart' : 'click' 
 var users = require('./data/users')
+var notice = require('./notice')
 
 var $searchBar
 var $search
 var searching = false
+var filterUser
 $(function () {
   $('#search-btn').on('vclick', toggle)
   $searchBar = $('nav.search')
@@ -14,7 +16,30 @@ $(function () {
   $search.on('keyup', update)
   $('#search-clear').on('vclick', clearSearch)
   $('#favetoggle').on('vclick', toggleFaveFilter)
+  $('#favetoggle').one('vclick', loginPrompt)
+  $('#notice').on('dismissed', function () {
+    filterUser = users.meSync()
+    update()
+  })
+
+  $(window).on('hashchange', function () {
+    var pg = window.location.hash.substr(1)
+    var match = pg.match(/^user\/([a-zA-Z0-9]+)$/) 
+    if (match) {
+      users.getUser(match[1]).then(function (user) {
+        filterUser = user
+        notice('Showing ' + user.name + '\'s faves')
+        faveFilterOn()
+      })
+    }
+  })
 })
+
+function loginPrompt() {
+  if (!users.meSync()) {
+    notice('Fave some shows to get back to them later. If you already have an account, <a class="button-main login-btn">log in</a>')
+  }
+}
 
 var faveFilter = false
 function toggleFaveFilter(e) {
@@ -37,12 +62,8 @@ function faveFilterOff() {
 function faveFilterOn() {
   cache()
   $('#favetoggle').removeClass('off').addClass('on')
-  console.log('users', users.meSync())
-  if (!users.meSync()) {
-    $('#notice-msg').html('Fave some shows to get back to them later. If you already have an account, <a class="button-main login-btn">log in</a>')
-    $('#notice').show()
-  }
   faveFilter = true
+  filterUser = filterUser || users.meSync()
   update()
 }
 
@@ -119,7 +140,7 @@ function update() {
       match = match && s.test(show.name)
     }
     if (faveFilter) {
-      match = match && show.fave === true
+      match = match && filterUser.faves.shows.indexOf(show._id) !== -1
     }
 
     if (match) {

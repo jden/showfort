@@ -1,4 +1,5 @@
 require('./vmouse')
+require('./hashchange')
 var tGroup = require('./templates/group.bliss')
 var tShow = require('./templates/show.bliss')
 var _ = require('lodash')
@@ -41,15 +42,12 @@ function render() {
     })
 
     $('#shows').empty().append(html) 
+    $(window).trigger('hashchange')
   })
 
-  $('#notice').on('vclick', function () {
-    $('#notice').hide()
-  })
+
   $('#notice').on('vclick', '.login-btn', function () {
-    users.authenticated(false, function () {
-      // 
-    })
+    users.authenticated(false, function () {})
   })
 }
 
