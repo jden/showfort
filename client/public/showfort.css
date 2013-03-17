@@ -523,6 +523,15 @@ color: #fff;
   background-image: -webkit-linear-gradient(top, #1eb0e9 0, #109adc 100%);
   background-image: linear-gradient(to bottom, #1eb0e9 0, #109adc 100%);
 }
+.list-divider.nextUp{
+  color: #fff;
+  background-color: #EBAE2A;
+  background-image: -webkit-linear-gradient(top, #EBAE2A 0, #D69C1E 100%);
+  background-image: linear-gradient(to bottom, #EBAE2A 0, #D69C1E 100%);
+}
+.list-divider.nextUp:before{
+  content: 'NEXT - ';
+}
 
 #commentsList{
   bottom: 50px;

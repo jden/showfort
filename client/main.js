@@ -57,3 +57,19 @@ setTimeout(function () {
     render()
   }
 }, 2000)
+
+function goToNow(time) {
+  time = time || new Date
+ shows.all().then(function (shows){
+    var next = _.find(_.sortBy(shows, 'timestamp'), function (show) {
+      return show.timestamp > time
+    })
+    var header = 'h'+next.day+next.hour.replace(':','')
+    try{
+      $('#'+header).addClass('nextUp')[0].scrollIntoView()
+    } catch (e) {
+
+    }
+ })
+}
+window.gtn = goToNow

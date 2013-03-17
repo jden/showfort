@@ -1,6 +1,6 @@
 @!(show, venue)
 @{
-  var href = 'https://twitter.com/intent/tweet?&hashtags=' + show.hashtag;
+  var href = 'https://twitter.com/intent/tweet?&hashtags=treefort,' + show.hashtag;
   if (show.tw) { href+='&text=@'+show.tw }
 }
 <div class="@show.venue showdetail @if (show.fave) { faved }" data-id="@show._id">
