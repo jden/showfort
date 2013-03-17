@@ -1,6 +1,7 @@
 var wham = require('wham')('treefortApi')
 var connect = require('connect')
 var cookies = require('cookies').express()
+var zip = require('./zip')
 
 var client = require('./client/server')
 var shows = require('./core/shows')
@@ -10,6 +11,7 @@ var users = require('./core/users')
 //
 
 wham.use(connect.bodyParser())
+wham.use(function (req, res, next) { res.req = req; next() })
 wham.use(cookies)
 wham.use(users.userify)
 wham.use(logReq)
@@ -26,7 +28,7 @@ wham('client assets', '/public')
   .get(client.assets)
 
 wham('shows list', '/shows')
-  .get(shows.list, 'req.query.skip', 'req.query.limit', 'req.user')
+  .get(shows.list, 'req.query.skip', 'req.query.limit', 'req.user', zip)
 
 wham('show comments', '/shows/:id/comments')
   .get(shows.getCommentsById, 'req.params.id')
@@ -56,3 +58,4 @@ function logReq(req, res, next) {
   console.log(Date.now(), req.path, req.query, req.method, req.user && req.user.name)
   next()
 }
+
