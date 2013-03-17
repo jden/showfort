@@ -2,7 +2,7 @@
 
 @if (faves.length) {
   @faves.map(function (fave, i) {
-    <a class="user">@fave</a>
+    <a class="user" href="#user/@fave">@fave</a>
   })
 } else {
   no faves yet!

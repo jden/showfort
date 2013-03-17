@@ -16,11 +16,6 @@ $(function () {
   $search.on('keyup', update)
   $('#search-clear').on('vclick', clearSearch)
   $('#favetoggle').on('vclick', toggleFaveFilter)
-  $('#favetoggle').one('vclick', loginPrompt)
-  $('#notice').on('dismissed', function () {
-    filterUser = users.meSync()
-    update()
-  })
 
   $(window).on('hashchange', function () {
     var pg = window.location.hash.substr(1)
@@ -28,14 +23,24 @@ $(function () {
     if (match) {
       users.getUser(match[1]).then(function (user) {
         filterUser = user
-        notice('Showing ' + user.name + '\'s faves')
+        $('#bar').addClass('sub')
+        $('#barTitle').text(user.name +'\'s faves')
         faveFilterOn()
+        $(document).on('back', function () {
+          filterUser = users.meSync()
+          $('#bar').removeClass('sub')
+          $('#barTitle').text('showfort')
+          faveFilterOff()
+        })
       })
     }
   })
 })
 
+var prompted = false
 function loginPrompt() {
+  if (prompted) { return }
+  prompted = true
   if (!users.meSync()) {
     notice('Fave some shows to get back to them later. If you already have an account, <a class="button-main login-btn">log in</a>')
   }
@@ -48,6 +53,7 @@ function toggleFaveFilter(e) {
   if (faveFilter) {
     faveFilterOff()
   } else {
+    loginPrompt()
     faveFilterOn()
   }
 }
@@ -117,7 +123,7 @@ function cache() {
   _.forEach(headers, function (shows, header) {
     cache.headers[header] = {c: shows.length, el: document.getElementById(header) }
   })
-  console.log('ch', cache.headers)
+
 }
 function clearCache(){
   delete cache._
@@ -140,7 +146,7 @@ function update() {
       match = match && s.test(show.name)
     }
     if (faveFilter) {
-      match = match && filterUser.faves.shows.indexOf(show._id) !== -1
+      match = match && filterUser ? filterUser.faves.shows.indexOf(show._id) !== -1 : false
     }
 
     if (match) {

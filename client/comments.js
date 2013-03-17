@@ -12,6 +12,7 @@ $(function () {
   $commentsList = $('#commentsList')
   $barTitle = $('#barTitle')
   $('#addCommentBar').on('submit', 'form', submit)
+  $commentsList.on('vclick', 'a.user', hide)
 })
 
 function show(show, focus) {

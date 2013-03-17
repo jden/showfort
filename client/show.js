@@ -21,9 +21,13 @@ $(document).on('updateList', collapse)
 
 $('#detail').on('vclick', '.button.comment', addComment)
             .on('vclick', '.button.fave', fave)
+            .on('vclick', '.comments .user', stop)
             .on('vclick', '.comments', showComments)
-
 })
+
+function stop(e) {
+  e.stopPropagation()
+}
 
 function toggle(e) {
   e.preventDefault()

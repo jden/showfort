@@ -30,7 +30,7 @@ module.exports = {
 
 events.on('loaded', function (user) {
   if (!user) {
-    $('#notice').show()
+    notice('Protip: You can customize your schedule! Tap "<span class="icon-star"></span> fave" on any show.')
   }
 })
 

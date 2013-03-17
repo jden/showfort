@@ -38,7 +38,6 @@ function all() {
 
 function byId(id) {
   return all().then(function (shows) {
-    console.log(shows, id, shows[id])
     return shows[id]
   })
 }

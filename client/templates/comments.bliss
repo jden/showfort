@@ -10,7 +10,7 @@
 
   @comments.map(function (comment) {
     <li>
-      <a class="user">@comment.user</a>: @parse(comment.text)
+      <a class="user" href="#user/@comment.user">@comment.user</a>: @parse(comment.text)
     </li>
   })
 } else {

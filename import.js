@@ -11,58 +11,8 @@ shows = [
   day: 3
 },
 {
-  name: "Fiddle Junkies",
-  hour: '12:30pm',
-  day: 3
-},
-{
-  name: 'Jan Summerhays',
-  hour: '2:00pm',
-  day: 3
-},
-{
-  name: "Edmund Wayne",
-  hour: "3:30pm",
-  day: 3
-},
-{
-  name: "Confluence",
-  hour: "5:00pm",
-  day: 3
-},
-{
-  name: "Steve Fulton Music",
-  hour: "6:30pm",
-  day: 3
-},
-{
   name: "Dan Costello",
   hour: "11:30am",
-  day: 4
-},
-{
-  name: "Palankeen",
-  hour: "12:30pm",
-  day: 4
-},
-{
-  name: "Like a Rocket",
-  hour: "2:00pm",
-  day: 4
-},
-{
-  name: "Colter Wilson",
-  hour: "3:30pm",
-  day: 4
-},
-{
-  name: "Shawn and the Marauders",
-  hour: "5:00pm",
-  day: 4
-},
-{
-  name: "Reilly Coyote",
-  hour: "6:30pm",
   day: 4
 }
 ]
@@ -95,10 +45,6 @@ function timestamp(obj) {
   var ampm = parsed[2]
 
   var date = obj.day + 20
-
-  if (ampm === 'am') {
-    date++
-  }
 
   return moment('2013-03-' + date +' ' + hhmm + ampm + ' -0600',
     'YYYY-MM-DD h:ma z')._d
