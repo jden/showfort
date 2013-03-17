@@ -31,7 +31,7 @@ var renderShows = function (shows, user) {
     if (user && show.faves && show.faves.indexOf(user.name) >= 0) {
       show.fave = true
     }
-    show.score = show.faves.length
+    show.score = show.faves ? show.faves.length : 0
     delete show.faves
   })
   return shows

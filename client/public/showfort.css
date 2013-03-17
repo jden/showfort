@@ -264,7 +264,9 @@ nav.search{
 .v14{
   border-left-color: #f60;
 }
-
+.v15{
+  border-left-color: #6DDB60;
+}
 @-webkit-keyframes flash{
   0% {
     /*background-color: #aaa;*/
@@ -365,7 +367,9 @@ border-radius: 3px;
 .v14 cite{
   border-color: #f60;
 }
-
+.v15 cite{
+  border-color: #6DDB60;
+}
 .showinfo .hashtag{
   margin-left: 30px;
 }
