@@ -77,13 +77,11 @@ function makeUserResp(user) {
 
 exports.getUser = function (username) {
   return  minq.from('users')
-    .where({name: username})
+    .where({name: minq.like(username)})
     .one()
     .then(function (user) {
-      if (!user) { 
-        var err = new Error()
-        err.code = 404
-        throw err
+      if (!user) {
+        throw 404
       }
 
       return makeUserResp(user)
