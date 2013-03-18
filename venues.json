@@ -94,5 +94,17 @@
     "_id": "v16",
     "at": "11th and Idaho",
     "age": "All ages"
+  },
+  {
+    "venue": "Egyptian Theater",
+    "_id": "v17",
+    "at": "Capital (7th) and Main",
+    "age": "All ages"
+  },
+  {
+    "venue": "The Watercooler",
+    "_id": "v18",
+    "at": "14th & Idaho",
+    "age": "All ages"
   }
 ]

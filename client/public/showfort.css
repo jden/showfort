@@ -270,6 +270,12 @@ nav.search{
 .v16{
   border-left-color: #9851F5;
 }
+.v17{
+  border-left-color: #E8E833;
+}
+.v18{
+  border-left-color: #5BCFFC;
+}
 @-webkit-keyframes flash{
   0% {
     /*background-color: #aaa;*/
@@ -377,6 +383,12 @@ border-radius: 3px;
 }
 .v16 cite{
   border-color: #9851F5;
+}
+.v17 cite{
+  border-color: #E8E833;
+}
+.v18 cite{
+  border-color: #5BCFFC;
 }
 .showinfo .hashtag{
   margin-left: 30px;
