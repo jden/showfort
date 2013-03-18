@@ -9,7 +9,7 @@ var faves = require('./faves')
 $(function () {
 
 $('#shows').on('vclick', '.listing', toggle)
-$('#detail').on('vclick', collapse)
+//$('#detail').on('vclick', collapse)
 $(document).on('scrollStart', collapse)
 $(document).on('updateList', collapse)
 // $('#shows').on('vclick', '.button.hashtag', function () {

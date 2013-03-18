@@ -6,20 +6,30 @@ var moment = require('moment')
 
 shows = [
 {
-  name: "Jake McKelvie & The Countertops",
-  hour: "11:30am",
+  name: "RX Secret In-store",
+  hour: "5:00pm",
+  day: 1
+},
+{
+  name: "RX Secret In-store",
+  hour: "4:00pm",
+  day: 2
+},
+{
+  name: "RX Secret In-store",
+  hour: "3:00pm",
   day: 3
 },
 {
-  name: "Dan Costello",
-  hour: "11:30am",
+  name: "RX Secret In-store",
+  hour: "4:30pm",
   day: 4
 }
 ]
 
 
 
-var ht = 320;
+var ht = 350;
 
 var Show = function(raw) {
 
@@ -28,7 +38,7 @@ var Show = function(raw) {
     name: raw.name,
     tw: undefined,
     hashtag: 'tfort'+ht++,
-    venue: 'v15',
+    venue: 'v16',
     day: raw.day,
     hour: raw.hour,
     timestamp: +timestamp(raw),

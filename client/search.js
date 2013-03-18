@@ -30,6 +30,7 @@ $(function () {
           filterUser = users.meSync()
           $('#bar').removeClass('sub')
           $('#barTitle').text('showfort')
+          window.location.hash = ''
           faveFilterOff()
         })
       })

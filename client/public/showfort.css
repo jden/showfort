@@ -267,6 +267,9 @@ nav.search{
 .v15{
   border-left-color: #6DDB60;
 }
+.v16{
+  border-left-color: #9851F5;
+}
 @-webkit-keyframes flash{
   0% {
     /*background-color: #aaa;*/
@@ -309,7 +312,9 @@ nav.search{
   -webkit-transform: rotate(-135deg);
 
 }
-
+#shows{
+  padding-bottom: 200px;
+}
 .detail{
 border: 1px solid #ccc;
 padding: 10px;
@@ -370,6 +375,9 @@ border-radius: 3px;
 .v15 cite{
   border-color: #6DDB60;
 }
+.v16 cite{
+  border-color: #9851F5;
+}
 .showinfo .hashtag{
   margin-left: 30px;
 }
@@ -404,7 +412,7 @@ color: #fff;
 }
 
 .detail .faves {
-  margin: 7px 0;
+  margin: 15px 0;
 }
 .detail .faves a:after{
   content: ',';

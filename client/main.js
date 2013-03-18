@@ -1,5 +1,4 @@
 require('./vmouse')
-require('./hashchange')
 var tGroup = require('./templates/group.bliss')
 var tShow = require('./templates/show.bliss')
 var _ = require('lodash')
@@ -9,7 +8,6 @@ var about = require('./about')
 require('./scrollMgr')
 var shows = require('./data/shows')
 var users = require('./data/users')
-
 
 $(function () {
   render()
