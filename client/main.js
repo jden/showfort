@@ -17,6 +17,13 @@ $(function () {
   })
 })
 
+var days = {
+  '1': 'Thursday',
+  '2': 'Friday',
+  '3': 'Saturday',
+  '4': 'Sunday'
+}
+
 function render() {
 
   shows.all().then(function (shows) {
@@ -29,7 +36,9 @@ function render() {
 
     _.forEach(s, function (shows, day) {
       
-      html += tGroup('Day ' + day, 'day')
+      var label = 'Day ' + day + ' (' + days[day] + ')'
+
+      html += tGroup(label, 'day')
 
       var s = _.groupBy(shows, 'hour')
       _.forEach(s, function (shows, hour) {
