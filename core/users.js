@@ -93,6 +93,10 @@ exports.me = function (user) {
     return Q.resolve()
   }
   var u = makeUserResp(user)
+
+  if (user.winner) {
+    u.VIP = 'fortified'
+  }
   return Q.resolve(u)
 }
 

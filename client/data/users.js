@@ -32,6 +32,9 @@ events.on('loaded', function (user) {
   if (!user) {
     notice('Protip: You can customize your schedule! Tap "<span class="icon-star"></span> fave" on any show.')
   }
+  if (user.VIP) {
+    notice('Hey there winner! We wanna give you a 4 day VIP pass, because we love you, and we love Treefort, and we want you to love Treefort, too. Email jason@denizac.org and say "'+ user.VIP +'"')
+  }
 })
 
 

@@ -6,39 +6,14 @@ var moment = require('moment')
 
 shows = [
 {
-  name: "To Kickstart or Not To Kickstart: Crowd-Source Funding",
-  hour: "11:00am",
+  name: "Ophelia",
+  hour: "8:30pm",
+  day: 2
+},
+{
+  name: "The Juke Daddys",
+  hour: "9:00pm",
   day: 3
-},
-{
-  name: "A Beginners’ Guide to Music Publishing and Licensing",
-  hour: "12:30pm",
-  day: 3
-},
-{
-  name: "Music Video Production",
-  hour: "2:0pm",
-  day: 3
-},
-{
-  name: "Los Angeles Music Video Festival Showcase",
-  hour: "3:15pm",
-  day: 3
-},
-{
-  name: "The Politics of Music",
-  hour: "11:00am",
-  day: 4
-},
-{
-  name: "Building A Local Music Scene",
-  hour: "12:30pm",
-  day: 4
-},
-{
-  name: "Bringing it All Together: Band Case Study",
-  hour: "2:00pm",
-  day: 4
 }
 ]
 
@@ -50,10 +25,10 @@ var Show = function(raw) {
 
   return {
     _id: minq.ObjectId(),
-    name: "Panel: " + raw.name,
+    name: "DIY: " + raw.name,
     tw: undefined,
     hashtag: 'tfort'+ht++,
-    venue: 'v18',
+    venue: 'v19',
     day: raw.day,
     hour: raw.hour,
     timestamp: +timestamp(raw),
