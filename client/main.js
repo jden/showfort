@@ -48,6 +48,8 @@ function render() {
 
     })
 
+    goToNow()
+
     $('#shows').empty().append(html) 
     $(window).trigger('hashchange')
   })
