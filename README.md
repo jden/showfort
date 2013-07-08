@@ -1,7 +1,7 @@
 showfort
 ========
 
-* archived for historical purposes *
+*archived for historical purposes*
 
 Showfort was a mobile-accessible, customizable guidebook to Boise's greatest independent music festival. Created over a series of sleepless nights in 2013, it attracted hundreds of users as a surperior alternative to the official native schedule applications.
 
